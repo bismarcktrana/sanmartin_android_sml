@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "D:\\Desarrollo\\prueba\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\pnl_ingreso.xml",
+        "source": "D:\\Desarrollo\\prueba\\app\\src\\main\\res\\layout\\pnl_ingreso.xml"
+    },
+    {
+        "merged": "D:\\Desarrollo\\prueba\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\frm_base_de_datos.xml",
+        "source": "D:\\Desarrollo\\prueba\\app\\src\\main\\res\\layout\\frm_base_de_datos.xml"
+    },
+    {
+        "merged": "D:\\Desarrollo\\prueba\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\frm_principal.xml",
+        "source": "D:\\Desarrollo\\prueba\\app\\src\\main\\res\\layout\\frm_principal.xml"
+    },
+    {
+        "merged": "D:\\Desarrollo\\prueba\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\mimnu_pnl_operador.xml",
+        "source": "D:\\Desarrollo\\prueba\\app\\src\\main\\res\\layout\\mimnu_pnl_operador.xml"
+    },
+    {
+        "merged": "D:\\Desarrollo\\prueba\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\pnl_modulos.xml",
+        "source": "D:\\Desarrollo\\prueba\\app\\src\\main\\res\\layout\\pnl_modulos.xml"
+    },
+    {
+        "merged": "D:\\Desarrollo\\prueba\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\pnl_parametro.xml",
+        "source": "D:\\Desarrollo\\prueba\\app\\src\\main\\res\\layout\\pnl_parametro.xml"
+    },
+    {
+        "merged": "D:\\Desarrollo\\prueba\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\frm_iniciar_sesion.xml",
+        "source": "D:\\Desarrollo\\prueba\\app\\src\\main\\res\\layout\\frm_iniciar_sesion.xml"
+    },
+    {
+        "merged": "D:\\Desarrollo\\prueba\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\mimnu_pnl_administrador.xml",
+        "source": "D:\\Desarrollo\\prueba\\app\\src\\main\\res\\layout\\mimnu_pnl_administrador.xml"
+    }
+]

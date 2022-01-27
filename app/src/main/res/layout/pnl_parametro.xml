@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pnl1_Conetendor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp">
+
+        <EditText
+            android:id="@+id/pnl1_txtParametro"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@android:drawable/editbox_background"
+            android:drawableLeft="@drawable/img_user_profile32x32"
+            android:hint="@string/p1_lblParametro"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLines="1"
+            android:nextFocusDown="@+id/pnl1_txtValor"
+            android:paddingStart="5dp"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimary"
+            android:textColorHighlight="@android:color/black"
+            android:textColorHint="@android:color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp">
+
+        <EditText
+            android:id="@+id/pnl1_txtValor"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:nextFocusDown="@+id/pnl1_txtParametro"
+            android:background="@android:drawable/editbox_background"
+            android:drawableLeft="@drawable/img_user_password32x32"
+            android:hint="@string/p1_lblValor"
+            android:inputType="text|textPassword"
+            android:textColor="@color/colorPrimary"
+            android:drawableTint="@color/colorPrimary"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+<!--
+    <LinearLayout
+        android:id="@+id/pnl1_Param1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/pnl1_lblParametro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Parametro" />
+
+        <EditText
+            android:id="@+id/pnl1_txtParametro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:drawable/editbox_background"
+            android:inputType="text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pnl1_Param2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/pbl1_lblValor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Valor" />
+
+        <EditText
+            android:id="@+id/pnl1_txtValor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:drawable/editbox_background"
+            android:inputType="text" />
+
+    </LinearLayout>
+-->
+</LinearLayout>

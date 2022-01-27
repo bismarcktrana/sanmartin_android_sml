@@ -1,0 +1,231 @@
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ItemMenu"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/optorden"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/zebra_chevron_button_icon_size"
+                android:layout_height="@dimen/zebra_chevron_button_icon_size"
+                android:layout_marginLeft="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_marginTop="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_marginBottom="@dimen/zebra_chevron_button_icon_margin"
+                android:src="@drawable/ic_action_update"
+                app:srcCompat="@drawable/ic_action_workorden" />
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_weight="1.0"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="PREPARAR ORDEN"
+                android:textColor="@color/zebra_blue"
+                android:textSize="18.0sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="@dimen/zebra_chevron_button_icon_size"
+                android:layout_height="@dimen/zebra_chevron_button_icon_size"
+                android:layout_margin="@dimen/zebra_chevron_button_icon_margin"
+                android:src="@drawable/icon_chevron_right_blue" />
+
+
+        </LinearLayout>
+
+        <View style="@style/Divider_Horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/optsincronizar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/zebra_chevron_button_icon_size"
+                android:layout_height="@dimen/zebra_chevron_button_icon_size"
+                android:layout_marginLeft="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_marginTop="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_marginBottom="@dimen/zebra_chevron_button_icon_margin"
+                android:src="@drawable/ic_action_update" />
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_weight="1.0"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="SINCRONIZAR"
+                android:textColor="@color/zebra_blue"
+                android:textSize="18.0sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="@dimen/zebra_chevron_button_icon_size"
+                android:layout_height="@dimen/zebra_chevron_button_icon_size"
+                android:layout_margin="@dimen/zebra_chevron_button_icon_margin"
+                android:src="@drawable/icon_chevron_right_blue" />
+
+
+        </LinearLayout>
+
+        <View style="@style/Divider_Horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/optreportes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/zebra_chevron_button_icon_size"
+                android:layout_height="@dimen/zebra_chevron_button_icon_size"
+                android:layout_marginLeft="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_marginTop="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_marginBottom="@dimen/zebra_chevron_button_icon_margin"
+                android:src="@drawable/ic_action_update"
+                app:srcCompat="@drawable/ic_action_usuario" />
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_weight="1.0"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="USUARIOS"
+                android:textColor="@color/zebra_blue"
+                android:textSize="18.0sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="@dimen/zebra_chevron_button_icon_size"
+                android:layout_height="@dimen/zebra_chevron_button_icon_size"
+                android:layout_margin="@dimen/zebra_chevron_button_icon_margin"
+                android:src="@drawable/icon_chevron_right_blue" />
+
+
+        </LinearLayout>
+
+        <View style="@style/Divider_Horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/optusuario"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/zebra_chevron_button_icon_size"
+                android:layout_height="@dimen/zebra_chevron_button_icon_size"
+                android:layout_marginLeft="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_marginTop="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_marginBottom="@dimen/zebra_chevron_button_icon_margin"
+                android:src="@drawable/ic_action_update"
+                app:srcCompat="@drawable/ic_action_exportar" />
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_weight="1.0"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="REPORTES"
+                android:textColor="@color/zebra_blue"
+                android:textSize="18.0sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="@dimen/zebra_chevron_button_icon_size"
+                android:layout_height="@dimen/zebra_chevron_button_icon_size"
+                android:layout_margin="@dimen/zebra_chevron_button_icon_margin"
+                android:src="@drawable/icon_chevron_right_blue" />
+
+
+        </LinearLayout>
+
+        <View style="@style/Divider_Horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/optdts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/zebra_chevron_button_icon_size"
+                android:layout_height="@dimen/zebra_chevron_button_icon_size"
+                android:layout_marginLeft="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_marginTop="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_marginBottom="@dimen/zebra_chevron_button_icon_margin"
+                android:src="@drawable/ic_action_update" />
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_weight="1.0"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="BASE DE DATOS"
+                android:textColor="@color/zebra_blue"
+                android:textSize="18.0sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="@dimen/zebra_chevron_button_icon_size"
+                android:layout_height="@dimen/zebra_chevron_button_icon_size"
+                android:layout_margin="@dimen/zebra_chevron_button_icon_margin"
+                android:src="@drawable/icon_chevron_right_blue" />
+
+        </LinearLayout>
+
+        <View style="@style/Divider_Horizontal" />
+    </LinearLayout>
+
+</LinearLayout>

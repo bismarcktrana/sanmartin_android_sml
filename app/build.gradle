@@ -1,0 +1,68 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    signingConfigs {
+        debug {
+            storeFile file('D:\\Desarrollo\\prueba\\clave\\key.jks')
+            storePassword '2004-20488Aa'
+            keyAlias 'debug'
+            keyPassword '2004-20488Aa'
+        }
+        release {
+            storeFile file('D:\\Desarrollo\\prueba\\clave\\key.jks')
+            storePassword '2004-20488Aa'
+            keyAlias 'release'
+            keyPassword '2004-20488Aa'
+        }
+    }
+    compileSdk 31
+
+    defaultConfig {
+        applicationId 'com.sdn.slp'
+        minSdk 21
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.release
+        minSdkVersion 19
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig signingConfigs.debug
+        }
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation project(path: ':app:tableview')
+    implementation project(path: ':app:bd')
+    implementation project(path: ':app:sound')
+    implementation 'commons-codec:commons-codec:20041127.091804'
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    implementation 'junit:junit:4.13.2'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
+    implementation 'commons-codec:commons-codec:20041127.091804'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'com.evrencoskun.library:tableview:0.8.9.4'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+}
