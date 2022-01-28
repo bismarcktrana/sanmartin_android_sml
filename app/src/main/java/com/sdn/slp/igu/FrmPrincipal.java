@@ -51,7 +51,8 @@ public class FrmPrincipal extends AppCompatActivity {
         ((LinearLayout) dialogView.findViewById(R.id.optorden)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(FrmPrincipal.this ,getResources().getString(R.string.lblParametroNoExiste),Toast.LENGTH_LONG).show();
+                Intent nuevaPantalla = new Intent(FrmPrincipal.this, FrmEscaneoLibre.class);
+                startActivity(nuevaPantalla);
             }
         });
 

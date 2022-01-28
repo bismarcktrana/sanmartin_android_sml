@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sdn.slp.lecturalibre.TabDetalle">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/p12_txtBuscarDetalle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="false"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/p12_txtSearchDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_background"
+            android:drawableStart="@drawable/ic_action_buscar"
+            android:hint="@string/buscar_codigo"
+
+            android:inputType="number"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:textColor="@android:color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.evrencoskun.tableview.TableView
+        android:id="@+id/p12_tbldetalle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/p12_txtBuscarDetalle"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@android:drawable/editbox_background"
+        app:selected_color="@color/table_view_default_selected_background_color"
+        app:shadow_color="@color/table_view_default_selected_background_color"></com.evrencoskun.tableview.TableView>
+
+</RelativeLayout>

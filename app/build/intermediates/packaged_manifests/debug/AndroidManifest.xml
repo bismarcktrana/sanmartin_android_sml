@@ -23,6 +23,9 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
+            android:name="com.sdn.slp.igu.FrmEscaneoLibre"
+            android:exported="true" />
+        <activity
             android:name="com.sdn.slp.igu.FrmPrincipal"
             android:exported="true" />
         <activity

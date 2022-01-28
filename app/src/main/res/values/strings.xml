@@ -29,5 +29,22 @@
     <string name="p2_lblrol">ROL</string>
     <string name="p2_mnu_salir">Salir</string>
 
+    <!-- TODO: FORMULARIO ESCANEO LIBRE -->
+    <string name="frmescaneolibre">Levamiento Libre</string>
+    <string name="escaner_codigo_de_barra">Codigo de Barra</string>
+    <string name="buscar_codigo">Escanee la caja a buscar</string>
+    <string name="lblCodigo">CODIGO</string>
+    <string name="lbldescripcion">DESCRIPCION</string>
+    <string name="lblcaja">CAJA</string>
+    <string name="lblpesolibra">PESO LBS</string>
+    <string name="lblpesokilo">PESO KG</string>
+    <string name="lbllote">LOTE</string>
+    <string name="lblserie">SERIE</string>
+    <string name="lblfechasacrificio">FECHA EMPAQUE</string>
+    <string name="lblfechaproceso">FECHA PROCESO</string>
+    <string name="lblfechavencimiento">CANTIDAD DE PIEZAS</string>
+    <string name="lblpesototal">PESO TOTAL</string>
+    <string name="lblcantcajas"># CAJAS</string>
+
 
 </resources>
