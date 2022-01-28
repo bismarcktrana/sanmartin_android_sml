@@ -1887,6 +1887,9 @@ int dimen abc_text_size_title_material 0x7f06004f
 int dimen abc_text_size_title_material_toolbar 0x7f060050
 int dimen action_bar_size 0x7f060051
 int dimen appcompat_dialog_background_inset 0x7f060052
+int dimen button_icon_margin 0x7f060255
+int dimen button_icon_size 0x7f060256
+int dimen button_std_size 0x7f060257
 int dimen cardview_compat_inset_shadow 0x7f060053
 int dimen cardview_default_elevation 0x7f060054
 int dimen cardview_default_radius 0x7f060055
@@ -2399,8 +2402,6 @@ int dimen tooltip_precise_anchor_threshold 0x7f06024f
 int dimen tooltip_vertical_padding 0x7f060250
 int dimen tooltip_y_offset_non_touch 0x7f060251
 int dimen tooltip_y_offset_touch 0x7f060252
-int dimen zebra_chevron_button_icon_margin 0x7f060253
-int dimen zebra_chevron_button_icon_size 0x7f060254
 int drawable abc_ab_share_pack_mtrl_alpha 0x7f070007
 int drawable abc_action_bar_item_background_material 0x7f070008
 int drawable abc_btn_borderless_material 0x7f070009

@@ -18,16 +18,14 @@
             android:id="@+id/p12_txtSearchDetalle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/editbox_background"
             android:drawableStart="@drawable/ic_action_buscar"
             android:hint="@string/buscar_codigo"
-
-            android:inputType="number"
-            android:paddingStart="5dp"
-            android:paddingEnd="5dp"
-            android:textColor="@android:color/black" />
-
+            android:inputType="text"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorGreed"
+            tools:ignore="TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
+
 
     <com.evrencoskun.tableview.TableView
         android:id="@+id/p12_tbldetalle"

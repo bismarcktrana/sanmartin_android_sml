@@ -19,18 +19,18 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="@dimen/zebra_chevron_button_icon_size"
-                android:layout_height="@dimen/zebra_chevron_button_icon_size"
-                android:layout_marginLeft="@dimen/zebra_chevron_button_icon_margin"
-                android:layout_marginTop="@dimen/zebra_chevron_button_icon_margin"
-                android:layout_marginBottom="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_width="@dimen/button_icon_size"
+                android:layout_height="@dimen/button_icon_size"
+                android:layout_marginLeft="@dimen/button_icon_margin"
+                android:layout_marginTop="@dimen/button_icon_margin"
+                android:layout_marginBottom="@dimen/button_icon_margin"
                 android:src="@drawable/ic_action_update"
                 app:srcCompat="@drawable/ic_action_workorden" />
 
             <TextView
                 android:layout_width="0.0dip"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_marginLeft="@dimen/button_icon_margin"
                 android:layout_weight="1.0"
                 android:ellipsize="end"
                 android:maxLines="1"
@@ -40,9 +40,9 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:layout_width="@dimen/zebra_chevron_button_icon_size"
-                android:layout_height="@dimen/zebra_chevron_button_icon_size"
-                android:layout_margin="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_width="@dimen/button_icon_size"
+                android:layout_height="@dimen/button_icon_size"
+                android:layout_margin="@dimen/button_icon_margin"
                 android:src="@drawable/icon_chevron_right_blue" />
 
 
@@ -64,17 +64,17 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="@dimen/zebra_chevron_button_icon_size"
-                android:layout_height="@dimen/zebra_chevron_button_icon_size"
-                android:layout_marginLeft="@dimen/zebra_chevron_button_icon_margin"
-                android:layout_marginTop="@dimen/zebra_chevron_button_icon_margin"
-                android:layout_marginBottom="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_width="@dimen/button_icon_size"
+                android:layout_height="@dimen/button_icon_size"
+                android:layout_marginLeft="@dimen/button_icon_margin"
+                android:layout_marginTop="@dimen/button_icon_margin"
+                android:layout_marginBottom="@dimen/button_icon_margin"
                 android:src="@drawable/ic_action_update" />
 
             <TextView
                 android:layout_width="0.0dip"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_marginLeft="@dimen/button_icon_margin"
                 android:layout_weight="1.0"
                 android:ellipsize="end"
                 android:maxLines="1"
@@ -84,9 +84,9 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:layout_width="@dimen/zebra_chevron_button_icon_size"
-                android:layout_height="@dimen/zebra_chevron_button_icon_size"
-                android:layout_margin="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_width="@dimen/button_icon_size"
+                android:layout_height="@dimen/button_icon_size"
+                android:layout_margin="@dimen/button_icon_margin"
                 android:src="@drawable/icon_chevron_right_blue" />
 
 
@@ -108,18 +108,18 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="@dimen/zebra_chevron_button_icon_size"
-                android:layout_height="@dimen/zebra_chevron_button_icon_size"
-                android:layout_marginLeft="@dimen/zebra_chevron_button_icon_margin"
-                android:layout_marginTop="@dimen/zebra_chevron_button_icon_margin"
-                android:layout_marginBottom="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_width="@dimen/button_icon_size"
+                android:layout_height="@dimen/button_icon_size"
+                android:layout_marginLeft="@dimen/button_icon_margin"
+                android:layout_marginTop="@dimen/button_icon_margin"
+                android:layout_marginBottom="@dimen/button_icon_margin"
                 android:src="@drawable/ic_action_update"
                 app:srcCompat="@drawable/ic_action_usuario" />
 
             <TextView
                 android:layout_width="0.0dip"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_marginLeft="@dimen/button_icon_margin"
                 android:layout_weight="1.0"
                 android:ellipsize="end"
                 android:maxLines="1"
@@ -129,9 +129,9 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:layout_width="@dimen/zebra_chevron_button_icon_size"
-                android:layout_height="@dimen/zebra_chevron_button_icon_size"
-                android:layout_margin="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_width="@dimen/button_icon_size"
+                android:layout_height="@dimen/button_icon_size"
+                android:layout_margin="@dimen/button_icon_margin"
                 android:src="@drawable/icon_chevron_right_blue" />
 
 
@@ -153,18 +153,18 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="@dimen/zebra_chevron_button_icon_size"
-                android:layout_height="@dimen/zebra_chevron_button_icon_size"
-                android:layout_marginLeft="@dimen/zebra_chevron_button_icon_margin"
-                android:layout_marginTop="@dimen/zebra_chevron_button_icon_margin"
-                android:layout_marginBottom="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_width="@dimen/button_icon_size"
+                android:layout_height="@dimen/button_icon_size"
+                android:layout_marginLeft="@dimen/button_icon_margin"
+                android:layout_marginTop="@dimen/button_icon_margin"
+                android:layout_marginBottom="@dimen/button_icon_margin"
                 android:src="@drawable/ic_action_update"
                 app:srcCompat="@drawable/ic_action_exportar" />
 
             <TextView
                 android:layout_width="0.0dip"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_marginLeft="@dimen/button_icon_margin"
                 android:layout_weight="1.0"
                 android:ellipsize="end"
                 android:maxLines="1"
@@ -174,9 +174,9 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:layout_width="@dimen/zebra_chevron_button_icon_size"
-                android:layout_height="@dimen/zebra_chevron_button_icon_size"
-                android:layout_margin="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_width="@dimen/button_icon_size"
+                android:layout_height="@dimen/button_icon_size"
+                android:layout_margin="@dimen/button_icon_margin"
                 android:src="@drawable/icon_chevron_right_blue" />
 
 
@@ -198,17 +198,17 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="@dimen/zebra_chevron_button_icon_size"
-                android:layout_height="@dimen/zebra_chevron_button_icon_size"
-                android:layout_marginLeft="@dimen/zebra_chevron_button_icon_margin"
-                android:layout_marginTop="@dimen/zebra_chevron_button_icon_margin"
-                android:layout_marginBottom="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_width="@dimen/button_icon_size"
+                android:layout_height="@dimen/button_icon_size"
+                android:layout_marginLeft="@dimen/button_icon_margin"
+                android:layout_marginTop="@dimen/button_icon_margin"
+                android:layout_marginBottom="@dimen/button_icon_margin"
                 android:src="@drawable/ic_action_update" />
 
             <TextView
                 android:layout_width="0.0dip"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_marginLeft="@dimen/button_icon_margin"
                 android:layout_weight="1.0"
                 android:ellipsize="end"
                 android:maxLines="1"
@@ -218,9 +218,9 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:layout_width="@dimen/zebra_chevron_button_icon_size"
-                android:layout_height="@dimen/zebra_chevron_button_icon_size"
-                android:layout_margin="@dimen/zebra_chevron_button_icon_margin"
+                android:layout_width="@dimen/button_icon_size"
+                android:layout_height="@dimen/button_icon_size"
+                android:layout_margin="@dimen/button_icon_margin"
                 android:src="@drawable/icon_chevron_right_blue" />
 
         </LinearLayout>
