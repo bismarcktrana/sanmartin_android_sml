@@ -1,19 +1,19 @@
 [
     {
-        "merged": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_tab_consolidado.xml",
-        "source": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\src\\main\\res\\layout\\fragment_tab_consolidado.xml"
-    },
-    {
-        "merged": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_lectura.xml",
-        "source": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\src\\main\\res\\layout\\fragment_lectura.xml"
-    },
-    {
         "merged": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\frm_base_de_datos.xml",
         "source": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\src\\main\\res\\layout\\frm_base_de_datos.xml"
     },
     {
+        "merged": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_tab_consolidado.xml",
+        "source": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\src\\main\\res\\layout\\fragment_tab_consolidado.xml"
+    },
+    {
         "merged": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\pnl_modulos.xml",
         "source": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\src\\main\\res\\layout\\pnl_modulos.xml"
+    },
+    {
+        "merged": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\pnlarchivo.xml",
+        "source": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\src\\main\\res\\layout\\pnlarchivo.xml"
     },
     {
         "merged": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_tab_detalle.xml",
@@ -24,6 +24,10 @@
         "source": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\src\\main\\res\\layout\\frm_iniciar_sesion.xml"
     },
     {
+        "merged": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\pnl_usuario.xml",
+        "source": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\src\\main\\res\\layout\\pnl_usuario.xml"
+    },
+    {
         "merged": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\frm_escaneo_libre.xml",
         "source": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\src\\main\\res\\layout\\frm_escaneo_libre.xml"
     },
@@ -32,12 +36,12 @@
         "source": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\src\\main\\res\\layout\\frm_principal.xml"
     },
     {
-        "merged": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_consolidado.xml",
-        "source": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\src\\main\\res\\layout\\fragment_consolidado.xml"
-    },
-    {
         "merged": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_tab_lectura.xml",
         "source": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\src\\main\\res\\layout\\fragment_tab_lectura.xml"
+    },
+    {
+        "merged": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\frm_usuario.xml",
+        "source": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\src\\main\\res\\layout\\frm_usuario.xml"
     },
     {
         "merged": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\pnl_ingreso.xml",
@@ -46,5 +50,9 @@
     {
         "merged": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\pnl_parametro.xml",
         "source": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\src\\main\\res\\layout\\pnl_parametro.xml"
+    },
+    {
+        "merged": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_usuario.xml",
+        "source": "D:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\src\\main\\res\\layout\\item_usuario.xml"
     }
 ]

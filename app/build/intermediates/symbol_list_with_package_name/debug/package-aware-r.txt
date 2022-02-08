@@ -107,9 +107,6 @@ attr alertDialogCenterButtons
 attr alertDialogStyle
 attr alertDialogTheme
 attr allowStacking
-attr allow_click_inside_cell
-attr allow_click_inside_column_header
-attr allow_click_inside_row_header
 attr alpha
 attr alphabeticModifiers
 attr altSrc
@@ -362,7 +359,6 @@ attr cornerSizeBottomLeft
 attr cornerSizeBottomRight
 attr cornerSizeTopLeft
 attr cornerSizeTopRight
-attr corner_view_location
 attr counterEnabled
 attr counterMaxLength
 attr counterOverflowTextAppearance
@@ -887,7 +883,6 @@ attr region_heightMoreThan
 attr region_widthLessThan
 attr region_widthMoreThan
 attr reverseLayout
-attr reverse_layout
 attr rippleColor
 attr rotationCenterId
 attr round
@@ -1797,6 +1792,7 @@ color switch_thumb_normal_material_light
 color table_view_default_selected_background_color
 color table_view_default_separator_color
 color table_view_default_shadow_background_color
+color table_view_default_text_color
 color table_view_default_unselected_background_color
 color test_color
 color test_mtrl_calendar_day
@@ -2498,10 +2494,13 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ic_action_actualizar
+drawable ic_action_add
 drawable ic_action_buscar
 drawable ic_action_delete
 drawable ic_action_exportar
 drawable ic_action_printer
+drawable ic_action_reporte
 drawable ic_action_update
 drawable ic_action_usuario
 drawable ic_action_wireless
@@ -2575,15 +2574,12 @@ id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
-id CellRecyclerView
-id ColumnHeaderRecyclerView
 id FUNCTION
 id ItemMenu
 id META
 id NO_DEBUG
 id PnlMenuItem
 id Registro
-id RowHeaderRecyclerView
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -2673,12 +2669,11 @@ id beginning
 id bestChoice
 id blocking
 id bottom
-id bottom_left
-id bottom_right
 id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnAgregarUsuario
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -2715,6 +2710,7 @@ id compress
 id confirm_button
 id constraint
 id container
+id contenedorBuscarCortador
 id content
 id contentPanel
 id contiguous
@@ -2796,6 +2792,7 @@ id home
 id homeAsUp
 id honorRequest
 id horizontal_only
+id i05_lblnombre
 id icon
 id icon_group
 id ifRoom
@@ -2807,6 +2804,7 @@ id imglgoo
 id immediateStop
 id included
 id info
+id inputSearch
 id invisible
 id inward
 id italic
@@ -2829,6 +2827,7 @@ id line3
 id linear
 id listMode
 id list_item
+id list_view
 id m01_action_help
 id m01_action_salir
 id m02_action_salir
@@ -2928,6 +2927,13 @@ id p02_registro
 id p02_txt_conectado
 id p03_Cbxtabla
 id p03_lblubicacionbd
+id p11_lblCliente
+id p11_lblNoOrden
+id p12_item_borrar
+id p12_item_borrartodo
+id p12_item_exportarlocal
+id p12_layout
+id p12_lblCantidadPiezas
 id p12_lblDescripcion
 id p12_lblLbsSolicitadas
 id p12_lblTituloNoCajas
@@ -2936,14 +2942,14 @@ id p12_lblcaja
 id p12_lblcodigo
 id p12_lblfechaempaque
 id p12_lblfechaproceso
-id p12_lblfechavencimiento
-id p12_lblkgsSolicitadas
 id p12_lbllote
 id p12_lblpesokbs
 id p12_lblpesolbs
 id p12_lblserie
 id p12_panelbusqueda
 id p12_pnlCajaTotal
+id p12_pnlConsolidado
+id p12_pnlDetalle
 id p12_pnlLectura
 id p12_pnlPesoTotal
 id p12_pnlcontenido
@@ -2951,19 +2957,19 @@ id p12_pnlinfoOrden
 id p12_tblconsolidado
 id p12_tbldetalle
 id p12_txtBuscarDetalle
+id p12_txtCantidadPiezas
 id p12_txtCodigo
 id p12_txtCodigoBarra
-id p12_txtLbseEscaneadas
+id p12_txtLbsEscaneadas
 id p12_txtSearchDetalle
 id p12_txtcaja
 id p12_txtcantcajas
 id p12_txtdescripcion
+id p12_txtfechaempaque
 id p12_txtfechaproceso
-id p12_txtfechasacrificio
-id p12_txtfechavencimiento
 id p12_txtkbsEscaneadas
 id p12_txtlote
-id p12_txtpesokbs
+id p12_txtpesokgs
 id p12_txtpesolbs
 id p12_txtpesototal
 id p12_txtserie
@@ -2973,7 +2979,6 @@ id p1_lblNombreCliente
 id p1_txtClave
 id p1_txtUsuario
 id packed
-id pager
 id parallax
 id parent
 id parentPanel
@@ -2986,8 +2991,18 @@ id peekHeight
 id percent
 id pin
 id pnl1_Conetendor
+id pnl1_txtNombreArchivo
 id pnl1_txtParametro
 id pnl1_txtValor
+id pnl3_Contenedor
+id pnl3_cbxTipo
+id pnl3_lblParametro1
+id pnl3_lblParametro2
+id pnl3_lblParametro3
+id pnl3_lblParametro4
+id pnl3_txtClave
+id pnl3_txtNombre
+id pnl3_txtUsuario
 id pnlTitulo
 id position
 id postLayout
@@ -3069,7 +3084,6 @@ id submenuarrow
 id submit_area
 id supportScrollUp
 id tabMode
-id tab_layout
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
@@ -3112,8 +3126,6 @@ id toggle
 id toolbar
 id top
 id topPanel
-id top_left
-id top_right
 id touch_outside
 id transitionToEnd
 id transitionToStart
@@ -3271,6 +3283,8 @@ layout frm_base_de_datos
 layout frm_escaneo_libre
 layout frm_iniciar_sesion
 layout frm_principal
+layout frm_usuario
+layout item_usuario
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3335,6 +3349,8 @@ layout notification_template_part_time
 layout pnl_ingreso
 layout pnl_modulos
 layout pnl_parametro
+layout pnl_usuario
+layout pnlarchivo
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -3361,13 +3377,21 @@ layout text_view_without_line_height
 menu example_menu
 menu example_menu2
 menu mnu_basedatos
+menu mnu_escaneolibre
 menu mnu_ingreso
 menu mnu_principal
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+raw beep_msg_error
+raw beep_msg_ok
+raw doblebeep_msg_error
+raw man_msg_error
+raw man_msg_ok
 raw msg_error
 raw msg_ok
+raw woman_msg_error
+raw woman_msg_ok
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -3402,6 +3426,7 @@ string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
 string bottomsheet_action_expand_halfway
 string buscar_codigo
+string buscar_usuario
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
@@ -3424,10 +3449,15 @@ string icon_content_description
 string item_view_role_description
 string lblCancelar
 string lblCodigo
+string lblEscaneoLibre
 string lblGuardar
 string lblModificad
+string lblNombreArchivo
 string lblParametroModificad
 string lblParametroNoExiste
+string lblReportes
+string lblSincronizar
+string lblUsuario
 string lblcaja
 string lblcantcajas
 string lbldescripcion
@@ -3491,6 +3521,9 @@ string material_timepicker_minute
 string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
+string mnu_borrar
+string mnu_borrartodo
+string mnu_exportar
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
 string mtrl_exceed_max_badge_number_content_description
@@ -4710,7 +4743,7 @@ styleable SwitchCompat android_textOn android_textOff android_thumb showText spl
 styleable SwitchMaterial useMaterialThemeColors
 styleable TabItem android_icon android_layout android_text
 styleable TabLayout tabBackground tabContentStart tabGravity tabIconTint tabIconTintMode tabIndicator tabIndicatorAnimationDuration tabIndicatorAnimationMode tabIndicatorColor tabIndicatorFullWidth tabIndicatorGravity tabIndicatorHeight tabInlineLabel tabMaxWidth tabMinWidth tabMode tabPadding tabPaddingBottom tabPaddingEnd tabPaddingStart tabPaddingTop tabRippleColor tabSelectedTextColor tabTextAppearance tabTextColor tabUnboundedRipple
-styleable TableView allow_click_inside_cell allow_click_inside_column_header allow_click_inside_row_header column_header_height corner_view_location reverse_layout row_header_width selected_color separator_color shadow_color show_horizontal_separator show_vertical_separator unselected_color
+styleable TableView column_header_height row_header_width selected_color separator_color shadow_color show_horizontal_separator show_vertical_separator unselected_color
 styleable TextAppearance android_textSize android_typeface android_textStyle android_textColor android_textColorHint android_textColorLink android_shadowColor android_shadowDx android_shadowDy android_shadowRadius android_fontFamily android_textFontWeight fontFamily fontVariationSettings textAllCaps textLocale
 styleable TextEffects android_textSize android_typeface android_textStyle android_text android_shadowColor android_shadowDx android_shadowDy android_shadowRadius android_fontFamily borderRound borderRoundPercent textFillColor textOutlineColor textOutlineThickness
 styleable TextInputEditText textInputLayoutFocusedRectEnabled

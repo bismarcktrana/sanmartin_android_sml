@@ -34,7 +34,7 @@
                 android:layout_weight="1.0"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="PREPARAR ORDEN"
+                android:text="@string/lblEscaneoLibre"
                 android:textColor="@color/zebra_blue"
                 android:textSize="18.0sp"
                 android:textStyle="bold" />
@@ -69,7 +69,8 @@
                 android:layout_marginLeft="@dimen/button_icon_margin"
                 android:layout_marginTop="@dimen/button_icon_margin"
                 android:layout_marginBottom="@dimen/button_icon_margin"
-                android:src="@drawable/ic_action_update" />
+                android:src="@drawable/ic_action_update"
+                app:srcCompat="@drawable/ic_action_actualizar" />
 
             <TextView
                 android:layout_width="0.0dip"
@@ -78,7 +79,7 @@
                 android:layout_weight="1.0"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="SINCRONIZAR"
+                android:text="@string/lblSincronizar"
                 android:textColor="@color/zebra_blue"
                 android:textSize="18.0sp"
                 android:textStyle="bold" />
@@ -114,7 +115,7 @@
                 android:layout_marginTop="@dimen/button_icon_margin"
                 android:layout_marginBottom="@dimen/button_icon_margin"
                 android:src="@drawable/ic_action_update"
-                app:srcCompat="@drawable/ic_action_usuario" />
+                app:srcCompat="@drawable/ic_action_reporte" />
 
             <TextView
                 android:layout_width="0.0dip"
@@ -123,7 +124,7 @@
                 android:layout_weight="1.0"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="USUARIOS"
+                android:text="@string/lblReportes"
                 android:textColor="@color/zebra_blue"
                 android:textSize="18.0sp"
                 android:textStyle="bold" />
@@ -159,7 +160,7 @@
                 android:layout_marginTop="@dimen/button_icon_margin"
                 android:layout_marginBottom="@dimen/button_icon_margin"
                 android:src="@drawable/ic_action_update"
-                app:srcCompat="@drawable/ic_action_exportar" />
+                app:srcCompat="@drawable/ic_action_usuario" />
 
             <TextView
                 android:layout_width="0.0dip"
@@ -168,7 +169,7 @@
                 android:layout_weight="1.0"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="REPORTES"
+                android:text="@string/lblUsuario"
                 android:textColor="@color/zebra_blue"
                 android:textSize="18.0sp"
                 android:textStyle="bold" />

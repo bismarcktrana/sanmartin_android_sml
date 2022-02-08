@@ -5,7 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 
 import com.sdn.bd.local.BDLocal;
-import com.sdn.slp.modelo.Objeto;
+import com.sdn.bd.modelo.Objeto;
 
 import java.util.ArrayList;
 

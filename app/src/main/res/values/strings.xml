@@ -33,11 +33,11 @@
     <string name="frmescaneolibre">Levamiento Libre</string>
     <string name="escaner_codigo_de_barra">Codigo de Barra</string>
     <string name="buscar_codigo">Escanee la caja a buscar</string>
-    <string name="lblCodigo">CODIGO</string>
+    <string name="lblCodigo">CODIGO DE PRODUCTO</string>
     <string name="lbldescripcion">DESCRIPCION</string>
-    <string name="lblcaja">CAJA</string>
-    <string name="lblpesolibra">PESO LBS</string>
-    <string name="lblpesokilo">PESO KG</string>
+    <string name="lblcaja">CODIGO DE BARRA</string>
+    <string name="lblpesolibra">PESO EN LIBRAS</string>
+    <string name="lblpesokilo">PESO EN KILOGRAMOS</string>
     <string name="lbllote">LOTE</string>
     <string name="lblserie">SERIE</string>
     <string name="lblfechasacrificio">FECHA EMPAQUE</string>
@@ -45,6 +45,15 @@
     <string name="lblfechavencimiento">CANTIDAD DE PIEZAS</string>
     <string name="lblpesototal">PESO TOTAL</string>
     <string name="lblcantcajas"># CAJAS</string>
+    <string name="mnu_exportar">Exportar</string>
+    <string name="mnu_borrar">Borrar</string>
+    <string name="mnu_borrartodo">BorrarTodo</string>
+    <string name="lblUsuario">USUARIOS</string>
+    <string name="lblReportes">REPORTES</string>
+    <string name="lblSincronizar">SINCRONIZAR</string>
+    <string name="lblEscaneoLibre">ESCANEO LIBRE</string>
+    <string name="buscar_usuario">Buscar por nombre de usuario</string>
+    <string name="lblNombreArchivo">Nombre del archivo</string>
 
 
 </resources>

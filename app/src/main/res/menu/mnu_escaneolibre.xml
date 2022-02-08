@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".FrmEscaneoLibre">
+
+    <item
+        android:id="@+id/p12_item_exportarlocal"
+        android:title="@string/mnu_exportar"
+        android:visible="false"
+        app:showAsAction="always"  />
+    <item
+        android:id="@+id/p12_item_borrar"
+        android:title="@string/mnu_borrar"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/p12_item_borrartodo"
+        android:title="@string/mnu_borrartodo"
+        android:visible="false"
+        app:showAsAction="collapseActionView" />
+</menu>

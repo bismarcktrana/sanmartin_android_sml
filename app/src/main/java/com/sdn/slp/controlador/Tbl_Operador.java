@@ -4,7 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 
 import com.sdn.bd.local.BDLocal;
-import com.sdn.slp.modelo.Operador;
+import com.sdn.bd.modelo.Operador;
 
 public class Tbl_Operador {
     private static final String SQLNuevoid = "Select (ifnull(max(id),0))+1 AS ID  from operador";

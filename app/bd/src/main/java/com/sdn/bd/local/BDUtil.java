@@ -31,15 +31,20 @@ public class BDUtil {
     }
 
     public static ArrayList<String> getColumnNames(Context contexto, String SQLQuery){
-        String[] columnas;
-        BDLocal.abrir(contexto);
-        Cursor result = BDLocal.BD_SQLITE.rawQuery(SQLQuery, null);
-        columnas = result.getColumnNames();
-        for(int i=0; i<columnas.length;i++){
-            Log.e(LOG_TAG, columnas[i].toString());
+        String[] columnas = new String[0];
+
+        try{
+            BDLocal.abrir(contexto);
+            Cursor result = BDLocal.BD_SQLITE.rawQuery(SQLQuery, null);
+            columnas = result.getColumnNames();
+            for(int i=0; i<columnas.length;i++){
+                Log.e(LOG_TAG, columnas[i].toString());
+            }
+            result.close();
+            BDLocal.cerrar();
+        }catch (Exception e){
+            e.printStackTrace();
         }
-        result.close();
-        BDLocal.cerrar();
         return  new ArrayList<String>(Arrays.asList(columnas));
     }
 
@@ -95,26 +100,31 @@ public class BDUtil {
         ArrayList<String> Celdas = new ArrayList<String>();;
         Integer CantColumnas=0;
 
-        BDLocal.abrir(contexto);
+        try{
+            BDLocal.abrir(contexto);
 
-        Cursor result = BDLocal.BD_SQLITE.rawQuery(SQLQuery, null);
-        CantColumnas = result.getColumnCount();
+            Cursor result = BDLocal.BD_SQLITE.rawQuery(SQLQuery, null);
+            CantColumnas = result.getColumnCount();
 
 
-        if (result.getCount() != 0) {
-            if (result.moveToFirst()) {
-                do {
-                    Celdas = new ArrayList<String>();
-                    for(int i=0; i<CantColumnas;i++){
-                        Celdas.add(result.getString(i));
-                    }
-                    //Log.e(LOG_TAG, Celdas.toString());
-                    Registros.add(Celdas);
-                } while (result.moveToNext());
+            if (result.getCount() != 0) {
+                if (result.moveToFirst()) {
+                    do {
+                        Celdas = new ArrayList<String>();
+                        for(int i=0; i<CantColumnas;i++){
+                            Celdas.add(result.getString(i));
+                        }
+                        //Log.e(LOG_TAG, Celdas.toString());
+                        Registros.add(Celdas);
+                    } while (result.moveToNext());
+                }
             }
+            result.close();
+            BDLocal.cerrar();
+
+        }catch (Exception e){
+
         }
-        result.close();
-        BDLocal.cerrar();
         return Registros;
     }
 

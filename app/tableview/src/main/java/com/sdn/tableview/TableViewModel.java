@@ -47,6 +47,14 @@ public class TableViewModel {
         Filas = BDUtil.getData(context,Query);
     }
 
+    public void addHeader(ArrayList<String> columnas){
+        Columnas = columnas;
+    }
+
+    public void addRow(ArrayList<String> Celdas){
+        Filas.add(Celdas);
+    }
+
     private List<RowHeader> getMyRowHeaderList() {
         List<RowHeader> list = new ArrayList<>();
         for (int i = Filas.size(); i > 0; i--) {

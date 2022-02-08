@@ -1,7 +1,5 @@
 package com.sdn.slp.igu;
 
-import static com.sdn.slp.controlador.Tbl_Operador.validarUsuario;
-
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -9,6 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -20,10 +19,16 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.sdn.bd.dao.TblOperador;
+import com.sdn.bd.dao.TblParametro;
+import com.sdn.bd.modelo.Lectura2;
 import com.sdn.slp.controlador.Tbl_Parametro;
-import com.sdn.slp.modelo.Operador;
+import com.sdn.bd.modelo.Operador;
 import com.sdn.utils.ConfApp;
 import com.sdn.utils.Utils;
+
+import java.io.File;
+import java.util.Date;
 
 public class Frm_IniciarSesion extends AppCompatActivity {
 
@@ -34,9 +39,34 @@ public class Frm_IniciarSesion extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ConfApp.createDirectoryWork(Frm_IniciarSesion.this);
+        Utils.createWorkDirectory(Frm_IniciarSesion.this,"sml");
+        //ConfApp.createDirectoryWork(Frm_IniciarSesion.this);
         ConfApp.loadParameters(Frm_IniciarSesion.this);
+/*
+        String appDirPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/SML";
+        File dir_temp = new File(appDirPath);
+        dir_temp.setExecutable(true);
+        dir_temp.setWritable(true);
+        dir_temp.setReadable(true);
+        dir_temp.setLastModified(new Date().getTime());
+
+        if(dir_temp.isDirectory()){
+            System.out.println("Si es un directorio");
+            if(!dir_temp.exists()){
+                dir_temp.mkdirs();
+            }
+        }else{
+            System.out.println("No es un directorio");
+        }*/
+
+
+
+       // Utils.sendSamba(Frm_IniciarSesion.this);
        // ConfApp.loadConection();
+        //Lectura2  lectura= Utils.DividirCodigo("010000000000598211151112320304255610000209032194998905");
+        //System.out.println("Lectura "+lectura.toString2());
+       // ConfApp.print2();
+
 
         setContentView(R.layout.frm_iniciar_sesion);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -65,16 +95,26 @@ public class Frm_IniciarSesion extends AppCompatActivity {
         String Clave = txtClave.getText().toString().trim();
 
         if(!Usuario.isEmpty() && !Clave.isEmpty()){
+
             if(Usuario.equals(ConfApp.SYSTEM_USER) && Clave.equals(ConfApp.SYSTEM_PASS)){
                 ConfApp.USER_DTS=true;
-                ConfApp.USER_ADMIN=true;
+                ConfApp.USER_SUPERVISOR =true;
                 ConfApp.OPERADORLOGEADO = new Operador(Usuario,Clave,Usuario,1);
                 Intent nuevaPantalla = new Intent(Frm_IniciarSesion.this, FrmPrincipal.class);
                 startActivity(nuevaPantalla);
             }else{
-                ConfApp.USER_DTS=false;
-                ConfApp.USER_ADMIN=false;
-                ConfApp.OPERADORLOGEADO = new Operador();
+                ConfApp.OPERADORLOGEADO = TblOperador.buscarUsuario(Frm_IniciarSesion.this, Usuario, Clave);
+                txtusuario.setText("");
+                txtClave.setText("");
+
+                if (ConfApp.OPERADORLOGEADO.getId() != -1) {
+                    ConfApp.USER_DTS=false;
+                    ConfApp.USER_SUPERVISOR = ConfApp.OPERADORLOGEADO.getTipo() == 1;
+                    ConfApp.USER_ESTIBADOR = ConfApp.OPERADORLOGEADO.getTipo() == 2;
+
+                    Intent nuevaPantalla = new Intent(Frm_IniciarSesion.this, FrmPrincipal.class);
+                    startActivity(nuevaPantalla);
+                }
             }
 
 
@@ -200,3 +240,4 @@ public class Frm_IniciarSesion extends AppCompatActivity {
         txtparametro.requestFocus();
     }
 }
+

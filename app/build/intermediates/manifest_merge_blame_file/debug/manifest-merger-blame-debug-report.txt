@@ -19,82 +19,92 @@
 13    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
 13-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:7:5-82
 13-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:7:22-79
-14
-15    <application
-15-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:9:5-34:19
-16        android:allowBackup="true"
-16-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:10:9-35
-17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-17-->[androidx.core:core:1.7.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\5f5e792acd1d8373e906efd73c4b888f\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
-18        android:debuggable="true"
-19        android:icon="@mipmap/ic_launcher"
-19-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:11:9-43
-20        android:label="@string/app_name"
-20-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:12:9-41
-21        android:roundIcon="@mipmap/ic_launcher_round"
-21-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:13:9-54
-22        android:supportsRtl="true"
-22-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:14:9-35
-23        android:testOnly="true"
-24        android:theme="@style/AppTheme" >
-24-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:15:9-40
-25        <activity
-25-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:16:9-18:39
-26            android:name="com.sdn.slp.igu.FrmEscaneoLibre"
-26-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:17:13-44
-27            android:exported="true" />
-27-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:18:13-36
-28        <activity
-28-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:19:9-21:39
-29            android:name="com.sdn.slp.igu.FrmPrincipal"
-29-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:20:13-41
-30            android:exported="true" />
-30-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:21:13-36
-31        <activity
-31-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:22:9-30:20
-32            android:name="com.sdn.slp.igu.Frm_IniciarSesion"
-32-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:23:13-46
-33            android:exported="true" >
-33-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:24:13-36
-34            <intent-filter>
-34-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:25:13-29:29
-35                <action android:name="android.intent.action.MAIN" />
-35-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:26:17-69
-35-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:26:25-66
-36
-37                <category android:name="android.intent.category.LAUNCHER" />
-37-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:28:17-77
-37-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:28:27-74
-38            </intent-filter>
-39        </activity>
-40        <activity
-40-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:31:9-33:39
-41            android:name="com.sdn.slp.igu.FrmBaseDeDatos"
-41-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:32:13-43
-42            android:exported="true" />
-42-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:33:13-36
-43
-44        <provider
-44-->[androidx.emoji2:emoji2:1.0.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\883c8571d9900e72cce7dfb06c6e0c4b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
-45            android:name="androidx.startup.InitializationProvider"
-45-->[androidx.emoji2:emoji2:1.0.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\883c8571d9900e72cce7dfb06c6e0c4b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
-46            android:authorities="com.sdn.slp.androidx-startup"
-46-->[androidx.emoji2:emoji2:1.0.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\883c8571d9900e72cce7dfb06c6e0c4b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
-47            android:exported="false" >
-47-->[androidx.emoji2:emoji2:1.0.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\883c8571d9900e72cce7dfb06c6e0c4b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
-48            <meta-data
-48-->[androidx.emoji2:emoji2:1.0.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\883c8571d9900e72cce7dfb06c6e0c4b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
-49                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-49-->[androidx.emoji2:emoji2:1.0.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\883c8571d9900e72cce7dfb06c6e0c4b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
-50                android:value="androidx.startup" />
-50-->[androidx.emoji2:emoji2:1.0.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\883c8571d9900e72cce7dfb06c6e0c4b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
-51            <meta-data
-51-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\c761cbdefd74fb3955bd84ec83922caa\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
-52                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-52-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\c761cbdefd74fb3955bd84ec83922caa\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
-53                android:value="androidx.startup" />
-53-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\c761cbdefd74fb3955bd84ec83922caa\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
-54        </provider>
-55    </application>
-56
-57</manifest>
+14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+14-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:9:5-78
+14-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:9:22-76
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:10:5-66
+15-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:10:22-64
+16    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+16-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:11:5-75
+16-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:11:22-73
+17
+18    <application
+18-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:13:5-38:19
+19        android:name="androidx.multidex.MultiDexApplication"
+20        android:allowBackup="true"
+20-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:14:9-35
+21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+21-->[androidx.core:core:1.7.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\5f5e792acd1d8373e906efd73c4b888f\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+22        android:debuggable="true"
+23        android:icon="@mipmap/ic_launcher"
+23-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:15:9-43
+24        android:label="@string/app_name"
+24-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:16:9-41
+25        android:roundIcon="@mipmap/ic_launcher_round"
+25-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:17:9-54
+26        android:supportsRtl="true"
+26-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:18:9-35
+27        android:testOnly="true"
+28        android:theme="@style/AppTheme" >
+28-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:19:9-40
+29        <activity
+29-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:20:9-22:39
+30            android:name="com.sdn.slp.igu.FrmEscaneoLibre"
+30-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:21:13-44
+31            android:exported="true" />
+31-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:22:13-36
+32        <activity
+32-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:23:9-25:39
+33            android:name="com.sdn.slp.igu.FrmPrincipal"
+33-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:24:13-41
+34            android:exported="true" />
+34-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:25:13-36
+35        <activity
+35-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:26:9-34:20
+36            android:name="com.sdn.slp.igu.Frm_IniciarSesion"
+36-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:27:13-46
+37            android:exported="true" >
+37-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:28:13-36
+38            <intent-filter>
+38-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:29:13-33:29
+39                <action android:name="android.intent.action.MAIN" />
+39-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:30:17-69
+39-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:30:25-66
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:32:17-77
+41-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:32:27-74
+42            </intent-filter>
+43        </activity>
+44        <activity
+44-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:35:9-37:39
+45            android:name="com.sdn.slp.igu.FrmBaseDeDatos"
+45-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:36:13-43
+46            android:exported="true" />
+46-->D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:37:13-36
+47
+48        <provider
+48-->[androidx.emoji2:emoji2:1.0.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\883c8571d9900e72cce7dfb06c6e0c4b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+49            android:name="androidx.startup.InitializationProvider"
+49-->[androidx.emoji2:emoji2:1.0.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\883c8571d9900e72cce7dfb06c6e0c4b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+50            android:authorities="com.sdn.slp.androidx-startup"
+50-->[androidx.emoji2:emoji2:1.0.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\883c8571d9900e72cce7dfb06c6e0c4b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+51            android:exported="false" >
+51-->[androidx.emoji2:emoji2:1.0.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\883c8571d9900e72cce7dfb06c6e0c4b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+52            <meta-data
+52-->[androidx.emoji2:emoji2:1.0.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\883c8571d9900e72cce7dfb06c6e0c4b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+53                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+53-->[androidx.emoji2:emoji2:1.0.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\883c8571d9900e72cce7dfb06c6e0c4b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+54                android:value="androidx.startup" />
+54-->[androidx.emoji2:emoji2:1.0.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\883c8571d9900e72cce7dfb06c6e0c4b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+55            <meta-data
+55-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\c761cbdefd74fb3955bd84ec83922caa\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+56                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+56-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\c761cbdefd74fb3955bd84ec83922caa\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+57                android:value="androidx.startup" />
+57-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\c761cbdefd74fb3955bd84ec83922caa\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+58        </provider>
+59    </application>
+60
+61</manifest>

@@ -3,10 +3,13 @@ package com.sdn.utils;
 import android.content.Context;
 import android.provider.Settings;
 
+import com.sdn.bd.modelo.Lectura2;
 import com.sdn.slp.controlador.Tbl_Parametro;
-import com.sdn.slp.modelo.Operador;
+import com.sdn.bd.modelo.Operador;
 
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Created by bismarck on 15/8/2016.
@@ -14,14 +17,6 @@ import java.text.DecimalFormat;
 public class ConfApp {
 
     public static String SCREEN_NAME="";
-
-    /**
-     * VARIABLES GLOBAL DEL SQLITE
-     */
-  //  public static String PATH_BDSAMBOX;
-   // public static String PATH_BDDESTINO;
-   // public static String BD_NAME ;
-  //  public static String PATH_BD ;
 
     /**
      * VARIABLES GLOBAL DE SERVIDOR REMOTO SQL SERVER
@@ -36,45 +31,56 @@ public class ConfApp {
      * VARIABLES GLOBAL DEL SISTEMA
      */
     public static Boolean USER_DTS = false;
-    public static Boolean USER_ADMIN = false;
+    public static Boolean USER_SUPERVISOR = false;
+    public static Boolean USER_ESTIBADOR = false;
 
+    /***
+     * VARIBLES DEL APP
+     */
+  /*  public static Date CODEBAR_FECHA_EMPAQUE = null;
+    public static Double CODEBAR_PESOLBS = 0.00;
+    public static Double CODEBAR_PESOKGS = 0.00;
+    public static String CODEBAR_IDPRODUCTO = "";
+    public static String CODEBAR_LOTE = "";
+    public static String CODEBAR_SERIE = "";
+    public static Integer CODEBAR_CANTIDADPIEZAS =0;
+    public static byte CODEBAR_UNIDADMEDIDA=-0; //0=lbs  , 1=kgs
+*/
+    //public static Lectura2 Lectura = new Lectura2();
+
+
+    /***
+     *VARIABLES GLOBAL DE AUTENTICACION
+     */
     public static String UUID_FROM_DEVICE;
     public static String UUID_ENCRYPTED;
     public static String UUID_DESENCRYPTED;
     public static boolean DEVICEAUTORIZED = false;
-    public static boolean ISSHOWING_DIALOG=false;
 
     public static String SYSTEM_USER;
     public static String SYSTEM_PASS;
 
-    public static String BRANCH_DEFAULT;
-    public static Integer VISOR_DEFAULT;
-
-    public static Integer TIMER_SCREEN_WAIT;
-    public static Integer TIMER_VISOR_GENERAL;
-    public static Integer TIMER_VISOR_MAYORISTA;
-    public static Integer COLOR_DEFAULT;
-
-    public static boolean SHOW_MODULE_PROMO;
-    public static Integer TIMER_PROPO_VISOR;
-    public static Integer TIMER_PROMO_DURATION;
-    public static boolean SHOW_AFTER_BARCODE_READ;
-
-    public static Boolean STOP_SCREEN=true;
-
     public static Operador OPERADORLOGEADO = new Operador();
 
+    public static SimpleDateFormat ISO8601_FORMATTER;
+
     public static String ISO8601_DATE;
+
     public static final String ISO8601_DATE_FORMAT_1="dd/MM/yyyy";
     public static final String ISO8601_DATE_FORMAT_2="yyyy-MM-dd";
 
-    public static String ISO8601_DATETIME;
+    public static String ISO8601_TIME;
     public static final String ISO8601_TIME_FORMAT_1="HH:MM:SS";
     public static final String ISO8601_TIME_FORMAT_2="hh:mm:ss aaa";
 
-    public static String ISO8601_TIME;
+    public static String ISO8601_DATETIME;
     public static final String ISO8601_DATE_TIME_FORMAT_1="dd/MM/yyyy hh:mm:ss aaa";
     public static final String ISO8601_DATE_TIME_FORMAT_2="YYYY-MM-dd HH:MM:SS";
+    public static final String ISO8601_FORMATTIMESTAMP_BD = "yyyy-MM-dd HH:mm:ss";
+    public static final String ISO8601_FORMATTIMESTAMP_BDWCF = "YYYY-MM-dd HH:MM:SS";
+
+    public static final String ISO8601_FORMATDATE_APP = "dd/MM/yyyy";
+    public static final String ISO8601_FORMATDATE_BD = "yyyy-MM-dd";
 
     public static final  DecimalFormat ISO8601_DECIMAL_FORMAT_1 = new DecimalFormat("#,###.00");
 
@@ -100,12 +106,6 @@ public class ConfApp {
 
     }
 
-    public static void createDirectoryWork(Context pantalla) {
-        Utils.getWorkDirectory(pantalla);
-    }
-
-
-
     public static String print() {
         return "ConfApp{"+
                 "URL='" + ConfApp.SERVER + '\'' +
@@ -120,8 +120,4 @@ public class ConfApp {
                 ", PATH_BDDESTINO='" + ConfApp.PATH_BDDESTINO + '\'' +*/
                 "'}'";
     }
-
-    /*public static void loadConection() {
-        BDOPERATION = new BDOperacion();
-    }*/
 }

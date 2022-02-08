@@ -51,7 +51,7 @@ public class ColumnHeaderLongPressPopup extends PopupMenu implements PopupMenu.O
         this.mViewHolder = viewHolder;
         this.mTableView = tableView;
         this.mContext = viewHolder.itemView.getContext();
-        this.mXPosition = mViewHolder.getAdapterPosition();
+        this.mXPosition = mViewHolder.getAdapterPosition();//getAdapterPosition();
 
         // find the view holder
         mViewHolder = (ColumnHeaderViewHolder) mTableView.getColumnHeaderRecyclerView()

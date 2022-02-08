@@ -3,15 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Desarrollo de Software/Clientes/sanmartin/sml/app/src/main/res/drawable/pnlingreso_backgroud.xml" value="0.2942708333333333" />
+        <entry key="..\:/Desarrollo de Software/Clientes/sanmartin/sml/app/src/main/res/layout-w936dp/frm_usuario.xml" value="0.33" />
         <entry key="..\:/Desarrollo de Software/Clientes/sanmartin/sml/app/src/main/res/layout/fragment_lectura.xml" value="0.14739583333333334" />
         <entry key="..\:/Desarrollo de Software/Clientes/sanmartin/sml/app/src/main/res/layout/fragment_lectura_libre.xml" value="0.25" />
-        <entry key="..\:/Desarrollo de Software/Clientes/sanmartin/sml/app/src/main/res/layout/fragment_tab_consolidado.xml" value="0.349009900990099" />
-        <entry key="..\:/Desarrollo de Software/Clientes/sanmartin/sml/app/src/main/res/layout/fragment_tab_detalle.xml" value="0.1" />
-        <entry key="..\:/Desarrollo de Software/Clientes/sanmartin/sml/app/src/main/res/layout/fragment_tab_lectura.xml" value="0.3078947368421053" />
+        <entry key="..\:/Desarrollo de Software/Clientes/sanmartin/sml/app/src/main/res/layout/fragment_tab_consolidado.xml" value="0.6075129533678757" />
+        <entry key="..\:/Desarrollo de Software/Clientes/sanmartin/sml/app/src/main/res/layout/fragment_tab_detalle.xml" value="0.3424657534246575" />
+        <entry key="..\:/Desarrollo de Software/Clientes/sanmartin/sml/app/src/main/res/layout/fragment_tab_lectura.xml" value="0.5" />
         <entry key="..\:/Desarrollo de Software/Clientes/sanmartin/sml/app/src/main/res/layout/frm_base_de_datos.xml" value="0.14739583333333334" />
-        <entry key="..\:/Desarrollo de Software/Clientes/sanmartin/sml/app/src/main/res/layout/frm_escaneo_libre.xml" value="0.25" />
+        <entry key="..\:/Desarrollo de Software/Clientes/sanmartin/sml/app/src/main/res/layout/frm_escaneo_libre.xml" value="0.27191413237924866" />
+        <entry key="..\:/Desarrollo de Software/Clientes/sanmartin/sml/app/src/main/res/layout/frm_iniciar_sesion.xml" value="0.25729166666666664" />
         <entry key="..\:/Desarrollo de Software/Clientes/sanmartin/sml/app/src/main/res/layout/frm_principal.xml" value="0.209375" />
+        <entry key="..\:/Desarrollo de Software/Clientes/sanmartin/sml/app/src/main/res/layout/frm_usuario.xml" value="0.33" />
+        <entry key="..\:/Desarrollo de Software/Clientes/sanmartin/sml/app/src/main/res/layout/item_usuario.xml" value="0.2598958333333333" />
         <entry key="..\:/Desarrollo de Software/Clientes/sanmartin/sml/app/src/main/res/layout/pnl_ingreso.xml" value="0.30879345603271985" />
+        <entry key="..\:/Desarrollo de Software/Clientes/sanmartin/sml/app/src/main/res/layout/pnl_modulos.xml" value="0.33" />
+        <entry key="..\:/Desarrollo de Software/Clientes/sanmartin/sml/app/src/main/res/layout/pnl_parametro.xml" value="0.17447916666666666" />
+        <entry key="..\:/Desarrollo de Software/Clientes/sanmartin/sml/app/src/main/res/layout/pnl_usuario.xml" value="0.25" />
+        <entry key="..\:/Desarrollo de Software/Clientes/sanmartin/sml/app/src/main/res/layout/pnlarchivo.xml" value="0.33" />
+        <entry key="..\:/Desarrollo de Software/Clientes/sanmartin/sml/app/src/main/res/menu/mnu_escaneolibre.xml" value="0.27384615384615385" />
+        <entry key="..\:/Desarrollo de Software/Clientes/sanmartin/sml/app/tableview/src/main/res/layout/table_view_row_header_layout.xml" value="0.16979166666666667" />
         <entry key="..\:/Desarrollo/prueba/app/src/main/res/drawable-v24/pnlingreso_backgroud.xml" value="0.20364583333333333" />
         <entry key="..\:/Desarrollo/prueba/app/src/main/res/layout-v23/pnl_parametro.xml" value="0.2390625" />
         <entry key="..\:/Desarrollo/prueba/app/src/main/res/layout/activity_main.xml" value="0.25" />

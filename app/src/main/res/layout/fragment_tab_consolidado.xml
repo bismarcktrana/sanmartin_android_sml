@@ -1,10 +1,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/p12_pnlConsolidado"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.sdn.slp.lecturalibre.TabConsolidado">
+    android:scrollbarAlwaysDrawVerticalTrack="true">
 
     <RelativeLayout
         android:id="@+id/p12_pnlinfoOrden"
@@ -24,40 +25,30 @@
             android:id="@+id/p12_lblLbsSolicitadas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="LBS ESCANEADAS:"
-            android:textColor="@color/zebra_blue"
-            android:textSize="12sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/p12_txtLbseEscaneadas"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/p12_lblLbsSolicitadas"
-            tools:text="ESCANEADO: "
-            android:textColor="@color/colorGreed"
-            android:textSize="12sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/p12_lblkgsSolicitadas"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/p12_txtLbseEscaneadas"
             android:textColor="@color/zebra_blue"
             android:textSize="12sp"
             android:textStyle="bold"
-            tools:text="LBS ESCANEADAS:" />
+            tools:text="# CAJAS ESCANEADAS:" />
+
+        <TextView
+            android:id="@+id/p12_txtLbsEscaneadas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/p12_lblLbsSolicitadas"
+            android:textColor="@color/colorGreed"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:text="PESO EN LIBRAS: " />
 
         <TextView
             android:id="@+id/p12_txtkbsEscaneadas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/p12_lblkgsSolicitadas"
-            tools:text="ESCANEADO: "
+            android:layout_below="@id/p12_txtLbsEscaneadas"
             android:textColor="@color/colorGreed"
             android:textSize="12sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:text="pESO EN KILOGRAMO: " />
 
     </RelativeLayout>
 

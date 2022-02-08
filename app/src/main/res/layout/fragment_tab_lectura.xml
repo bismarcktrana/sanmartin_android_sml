@@ -3,14 +3,16 @@
     android:id="@+id/p12_pnlLectura"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="5dp"
     android:orientation="vertical"
-    tools:context="com.sdn.slp.lecturalibre.LabLectura">
-
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+<!--
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/p12_panelbusqueda"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp"
         android:focusableInTouchMode="true">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -18,21 +20,46 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:drawable/editbox_background"
-            android:drawableStart="@drawable/ic_action_buscar"
             android:focusable="auto"
             android:hint="@string/escaner_codigo_de_barra"
-            android:inputType="text"
-            android:minHeight="48dp"
             android:paddingStart="5dp"
             android:paddingEnd="5dp"
-            android:textColor="@android:color/black"
-            android:textSize="12sp"
-            tools:ignore="TouchTargetSizeCheck" />
+            android:inputType="text"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorGreed"
+            tools:ignore="TextContrastCheck"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+-->
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/p12_panelbusqueda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:focusableInTouchMode="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/p12_txtCodigoBarra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_action_buscar"
+            android:hint="@string/escaner_codigo_de_barra"
+            android:inputType="text"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorGreed"
+            tools:ignore="TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
         android:background="@android:drawable/editbox_background">
 
         <RelativeLayout
@@ -43,7 +70,7 @@
 
             <TextView
                 android:id="@+id/p12_lblcodigo"
-                android:layout_width="130dp"
+                android:layout_width="145dp"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/actionModeSplitBackground"
                 android:gravity="center_vertical"
@@ -66,7 +93,7 @@
 
             <TextView
                 android:id="@+id/p12_lblDescripcion"
-                android:layout_width="130dp"
+                android:layout_width="145dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/p12_txtCodigo"
                 android:layout_marginTop="2dp"
@@ -93,7 +120,7 @@
 
             <TextView
                 android:id="@+id/p12_lblcaja"
-                android:layout_width="130dp"
+                android:layout_width="145dp"
                 android:layout_height="40dp"
                 android:layout_below="@+id/p12_txtdescripcion"
                 android:layout_centerVertical="false"
@@ -121,7 +148,7 @@
 
             <TextView
                 android:id="@+id/p12_lblpesolbs"
-                android:layout_width="130dp"
+                android:layout_width="145dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/p12_lblcaja"
                 android:layout_marginTop="2dp"
@@ -148,7 +175,7 @@
 
             <TextView
                 android:id="@+id/p12_lblpesokbs"
-                android:layout_width="130dp"
+                android:layout_width="145dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/p12_lblpesolbs"
                 android:layout_marginTop="2dp"
@@ -160,7 +187,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/p12_txtpesokbs"
+                android:id="@+id/p12_txtpesokgs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/p12_lblpesolbs"
@@ -175,7 +202,7 @@
 
             <TextView
                 android:id="@+id/p12_lbllote"
-                android:layout_width="130dp"
+                android:layout_width="145dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/p12_lblpesokbs"
                 android:layout_marginTop="2dp"
@@ -202,7 +229,7 @@
 
             <TextView
                 android:id="@+id/p12_lblserie"
-                android:layout_width="130dp"
+                android:layout_width="145dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/p12_lbllote"
                 android:layout_marginTop="2dp"
@@ -229,7 +256,7 @@
 
             <TextView
                 android:id="@+id/p12_lblfechaempaque"
-                android:layout_width="130dp"
+                android:layout_width="145dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/p12_txtserie"
                 android:layout_marginTop="2dp"
@@ -241,7 +268,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/p12_txtfechasacrificio"
+                android:id="@+id/p12_txtfechaempaque"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/p12_txtserie"
@@ -256,7 +283,7 @@
 
             <TextView
                 android:id="@+id/p12_lblfechaproceso"
-                android:layout_width="130dp"
+                android:layout_width="145dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/p12_lblfechaempaque"
                 android:layout_marginTop="2dp"
@@ -282,8 +309,8 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/p12_lblfechavencimiento"
-                android:layout_width="130dp"
+                android:id="@+id/p12_lblCantidadPiezas"
+                android:layout_width="145dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/p12_lblfechaproceso"
                 android:layout_marginTop="2dp"
@@ -295,13 +322,13 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/p12_txtfechavencimiento"
+                android:id="@+id/p12_txtCantidadPiezas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/p12_txtfechaproceso"
                 android:layout_alignParentEnd="false"
                 android:layout_marginTop="2dp"
-                android:layout_toEndOf="@+id/p12_lblfechavencimiento"
+                android:layout_toEndOf="@+id/p12_lblCantidadPiezas"
                 android:background="?android:attr/actionModeSplitBackground"
                 android:gravity="center_vertical"
                 android:textColor="@color/zebra_blue"
@@ -312,7 +339,7 @@
                 android:id="@+id/p12_pnlPesoTotal"
                 android:layout_width="180dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/p12_txtfechavencimiento"
+                android:layout_below="@+id/p12_txtCantidadPiezas"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="false"
                 android:layout_marginTop="2dp"
@@ -351,7 +378,7 @@
                 android:id="@+id/p12_pnlCajaTotal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/p12_txtfechavencimiento"
+                android:layout_below="@+id/p12_txtCantidadPiezas"
                 android:layout_alignParentStart="false"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="2dp"
@@ -381,6 +408,7 @@
                     android:textColor="@color/colorRed"
                     android:textSize="18sp"
                     android:textStyle="bold"
+                    tools:ignore="TextContrastCheck"
                     tools:text="2" />
             </LinearLayout>
         </RelativeLayout>

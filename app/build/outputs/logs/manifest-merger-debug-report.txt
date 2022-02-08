@@ -1,15 +1,17 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:2:1-36:12
+ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:2:1-40:12
 MERGED from [androidx.databinding:viewbinding:7.0.1] C:\Users\DESARROLLO\.gradle\caches\transforms-3\ff5d982a54f36c84e4fced91462e97bb\transformed\jetified-viewbinding-7.0.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\DESARROLLO\.gradle\caches\transforms-3\c62891a8e3a42fe05b7801918841d6c1\transformed\multidex-2.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [:app:tableview] D:\Desarrollo de Software\Clientes\sanmartin\sml\app\tableview\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:app:bd] D:\Desarrollo de Software\Clientes\sanmartin\sml\app\bd\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:app:sound] D:\Desarrollo de Software\Clientes\sanmartin\sml\app\sound\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.material:material:1.6.0-alpha02] C:\Users\DESARROLLO\.gradle\caches\transforms-3\4a3b5a64240697dd0a5d97599fbebe9e\transformed\material-1.6.0-alpha02\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\DESARROLLO\.gradle\caches\transforms-3\767b9a167597bcf72f3ba8e263f2f775\transformed\constraintlayout-2.1.3\AndroidManifest.xml:2:1-11:12
+MERGED from [com.evrencoskun.library:tableview:0.8.8] C:\Users\DESARROLLO\.gradle\caches\transforms-3\e7103720e0ca2e372b4fd0e801ed2b47\transformed\jetified-tableview-0.8.8\AndroidManifest.xml:18:1-33:12
 MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\DESARROLLO\.gradle\caches\transforms-3\3fa0fe92d846f5c8ae89ebc20cb4fd9e\transformed\appcompat-1.4.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.4.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\34b84ce8a8d65cc75bb94c2a2f9f48b6\transformed\jetified-lifecycle-livedata-ktx-2.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\55e311d705e7ca24b3efd8612e6caa41\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -17,7 +19,6 @@ MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\DESARROLLO\.gradle\c
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\DESARROLLO\.gradle\caches\transforms-3\85b785c0f464fd717fc0c3319209a901\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\1ea53c2095fc748f851c30510ed97702\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager:viewpager:1.1.0-alpha01] C:\Users\DESARROLLO\.gradle\caches\transforms-3\44659a05c307f1429faaf3b2c5e47d50\transformed\viewpager-1.1.0-alpha01\AndroidManifest.xml:17:1-24:12
-MERGED from [com.evrencoskun.library:tableview:0.8.9.4] C:\Users\DESARROLLO\.gradle\caches\transforms-3\52c62d334c3a2556525744a7a8daf560\transformed\jetified-tableview-0.8.9.4\AndroidManifest.xml:25:1-34:12
 MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\DESARROLLO\.gradle\caches\transforms-3\fb507661b6070c4eb137f6e65da1f5ed\transformed\recyclerview-1.2.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.2.4] C:\Users\DESARROLLO\.gradle\caches\transforms-3\5eeb40ee79f0a3a18b8785bf16b7a869\transformed\jetified-activity-1.2.4\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.4.1] C:\Users\DESARROLLO\.gradle\caches\transforms-3\e7388cf87339b691eba5a633bf4fad66\transformed\jetified-appcompat-resources-1.4.1\AndroidManifest.xml:17:1-24:12
@@ -56,20 +57,20 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.print:print:1.0.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\364cd11e18b25eea3f64fd0a4b722373\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\2f8e445222e4e599ddd0550fcb0ff3e9\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\990035cce6f8133573ea22ca7a8dd41c\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:2:1-40:12
 	package
 		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:3:5-30
 		INJECTED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml
-		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:2:1-36:12
+		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:2:1-40:12
 		INJECTED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml
-		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:2:1-36:12
+		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:2:1-40:12
 		INJECTED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:2:11-69
@@ -85,12 +86,26 @@ uses-permission#android.permission.MANAGE_EXTERNAL_STORAGE
 ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:7:5-82
 	android:name
 		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:7:22-79
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:9:5-78
+	android:name
+		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:9:22-76
+uses-permission#android.permission.INTERNET
+ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:10:5-66
+	android:name
+		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:10:22-64
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:11:5-75
+	android:name
+		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:11:22-73
 application
-ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:9:5-34:19
+ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:13:5-38:19
 MERGED from [com.google.android.material:material:1.6.0-alpha02] C:\Users\DESARROLLO\.gradle\caches\transforms-3\4a3b5a64240697dd0a5d97599fbebe9e\transformed\material-1.6.0-alpha02\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.6.0-alpha02] C:\Users\DESARROLLO\.gradle\caches\transforms-3\4a3b5a64240697dd0a5d97599fbebe9e\transformed\material-1.6.0-alpha02\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\DESARROLLO\.gradle\caches\transforms-3\767b9a167597bcf72f3ba8e263f2f775\transformed\constraintlayout-2.1.3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\DESARROLLO\.gradle\caches\transforms-3\767b9a167597bcf72f3ba8e263f2f775\transformed\constraintlayout-2.1.3\AndroidManifest.xml:9:5-20
+MERGED from [com.evrencoskun.library:tableview:0.8.8] C:\Users\DESARROLLO\.gradle\caches\transforms-3\e7103720e0ca2e372b4fd0e801ed2b47\transformed\jetified-tableview-0.8.8\AndroidManifest.xml:27:5-31:19
+MERGED from [com.evrencoskun.library:tableview:0.8.8] C:\Users\DESARROLLO\.gradle\caches\transforms-3\e7103720e0ca2e372b4fd0e801ed2b47\transformed\jetified-tableview-0.8.8\AndroidManifest.xml:27:5-31:19
 MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\883c8571d9900e72cce7dfb06c6e0c4b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:25:5-35:19
 MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\883c8571d9900e72cce7dfb06c6e0c4b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:25:5-35:19
 MERGED from [androidx.core:core:1.7.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\5f5e792acd1d8373e906efd73c4b888f\transformed\core-1.7.0\AndroidManifest.xml:24:5-89
@@ -104,57 +119,59 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\DESARROLLO\.gradle
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.7.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\5f5e792acd1d8373e906efd73c4b888f\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:14:9-35
+		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:18:9-35
 	android:label
-		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:12:9-41
+		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:16:9-41
 	android:roundIcon
-		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:13:9-54
+		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:17:9-54
 	android:icon
-		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:11:9-43
+		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:15:9-43
 	android:allowBackup
-		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:14:9-35
 	android:theme
-		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:15:9-40
+		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:19:9-40
 activity#com.sdn.slp.igu.FrmEscaneoLibre
-ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:16:9-18:39
+ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:20:9-22:39
 	android:exported
-		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:18:13-36
+		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:22:13-36
 	android:name
-		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:17:13-44
+		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:21:13-44
 activity#com.sdn.slp.igu.FrmPrincipal
-ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:19:9-21:39
+ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:23:9-25:39
 	android:exported
-		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:21:13-36
+		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:25:13-36
 	android:name
-		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:20:13-41
+		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:24:13-41
 activity#com.sdn.slp.igu.Frm_IniciarSesion
-ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:22:9-30:20
+ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:26:9-34:20
 	android:exported
-		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:24:13-36
+		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:28:13-36
 	android:name
-		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:23:13-46
+		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:27:13-46
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:25:13-29:29
+ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:29:13-33:29
 action#android.intent.action.MAIN
-ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:26:17-69
+ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:30:17-69
 	android:name
-		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:26:25-66
+		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:30:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:28:17-77
+ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:32:17-77
 	android:name
-		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:28:27-74
+		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:32:27-74
 activity#com.sdn.slp.igu.FrmBaseDeDatos
-ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:31:9-33:39
+ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:35:9-37:39
 	android:exported
-		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:33:13-36
+		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:37:13-36
 	android:name
-		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:32:13-43
+		ADDED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml:36:13-43
 uses-sdk
 INJECTED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml
 INJECTED from D:\Desarrollo de Software\Clientes\sanmartin\sml\app\src\main\AndroidManifest.xml
 MERGED from [androidx.databinding:viewbinding:7.0.1] C:\Users\DESARROLLO\.gradle\caches\transforms-3\ff5d982a54f36c84e4fced91462e97bb\transformed\jetified-viewbinding-7.0.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.databinding:viewbinding:7.0.1] C:\Users\DESARROLLO\.gradle\caches\transforms-3\ff5d982a54f36c84e4fced91462e97bb\transformed\jetified-viewbinding-7.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\DESARROLLO\.gradle\caches\transforms-3\c62891a8e3a42fe05b7801918841d6c1\transformed\multidex-2.0.1\AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\DESARROLLO\.gradle\caches\transforms-3\c62891a8e3a42fe05b7801918841d6c1\transformed\multidex-2.0.1\AndroidManifest.xml:20:5-43
 MERGED from [:app:tableview] D:\Desarrollo de Software\Clientes\sanmartin\sml\app\tableview\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:app:tableview] D:\Desarrollo de Software\Clientes\sanmartin\sml\app\tableview\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:app:bd] D:\Desarrollo de Software\Clientes\sanmartin\sml\app\bd\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
@@ -165,6 +182,8 @@ MERGED from [com.google.android.material:material:1.6.0-alpha02] C:\Users\DESARR
 MERGED from [com.google.android.material:material:1.6.0-alpha02] C:\Users\DESARROLLO\.gradle\caches\transforms-3\4a3b5a64240697dd0a5d97599fbebe9e\transformed\material-1.6.0-alpha02\AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\DESARROLLO\.gradle\caches\transforms-3\767b9a167597bcf72f3ba8e263f2f775\transformed\constraintlayout-2.1.3\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\DESARROLLO\.gradle\caches\transforms-3\767b9a167597bcf72f3ba8e263f2f775\transformed\constraintlayout-2.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [com.evrencoskun.library:tableview:0.8.8] C:\Users\DESARROLLO\.gradle\caches\transforms-3\e7103720e0ca2e372b4fd0e801ed2b47\transformed\jetified-tableview-0.8.8\AndroidManifest.xml:23:5-25:41
+MERGED from [com.evrencoskun.library:tableview:0.8.8] C:\Users\DESARROLLO\.gradle\caches\transforms-3\e7103720e0ca2e372b4fd0e801ed2b47\transformed\jetified-tableview-0.8.8\AndroidManifest.xml:23:5-25:41
 MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\DESARROLLO\.gradle\caches\transforms-3\3fa0fe92d846f5c8ae89ebc20cb4fd9e\transformed\appcompat-1.4.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\DESARROLLO\.gradle\caches\transforms-3\3fa0fe92d846f5c8ae89ebc20cb4fd9e\transformed\appcompat-1.4.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.4.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\34b84ce8a8d65cc75bb94c2a2f9f48b6\transformed\jetified-lifecycle-livedata-ktx-2.4.0\AndroidManifest.xml:20:5-22:41
@@ -179,8 +198,6 @@ MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\DESARROLLO\.
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\DESARROLLO\.gradle\caches\transforms-3\1ea53c2095fc748f851c30510ed97702\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.1.0-alpha01] C:\Users\DESARROLLO\.gradle\caches\transforms-3\44659a05c307f1429faaf3b2c5e47d50\transformed\viewpager-1.1.0-alpha01\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager:viewpager:1.1.0-alpha01] C:\Users\DESARROLLO\.gradle\caches\transforms-3\44659a05c307f1429faaf3b2c5e47d50\transformed\viewpager-1.1.0-alpha01\AndroidManifest.xml:20:5-22:41
-MERGED from [com.evrencoskun.library:tableview:0.8.9.4] C:\Users\DESARROLLO\.gradle\caches\transforms-3\52c62d334c3a2556525744a7a8daf560\transformed\jetified-tableview-0.8.9.4\AndroidManifest.xml:30:5-32:41
-MERGED from [com.evrencoskun.library:tableview:0.8.9.4] C:\Users\DESARROLLO\.gradle\caches\transforms-3\52c62d334c3a2556525744a7a8daf560\transformed\jetified-tableview-0.8.9.4\AndroidManifest.xml:30:5-32:41
 MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\DESARROLLO\.gradle\caches\transforms-3\fb507661b6070c4eb137f6e65da1f5ed\transformed\recyclerview-1.2.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\DESARROLLO\.gradle\caches\transforms-3\fb507661b6070c4eb137f6e65da1f5ed\transformed\recyclerview-1.2.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.2.4] C:\Users\DESARROLLO\.gradle\caches\transforms-3\5eeb40ee79f0a3a18b8785bf16b7a869\transformed\jetified-activity-1.2.4\AndroidManifest.xml:20:5-22:41

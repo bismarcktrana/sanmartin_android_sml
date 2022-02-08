@@ -56,10 +56,10 @@ public class TableViewListener implements ITableViewListener {
 
     }
 
-    @Override
+    /*@Override
     public void onCellDoubleClicked(@NonNull RecyclerView.ViewHolder cellView, int column, int row) {
 
-    }
+    }*/
 
     /**
      * Called when user long press any cell item.
@@ -89,10 +89,10 @@ public class TableViewListener implements ITableViewListener {
         //   showToast(mTableView.get.getAdapter().getcogetColumnHeaderItem(column).toString()+"");
     }
 
-    @Override
+    /*@Override
     public void onColumnHeaderDoubleClicked(@NonNull RecyclerView.ViewHolder columnHeaderView, int column) {
 
-    }
+    }*/
 
     /**
      * Called when user long press any column header item.
@@ -126,10 +126,10 @@ public class TableViewListener implements ITableViewListener {
         // showToast("Row header " + row + " has been clicked.");
     }
 
-    @Override
+   /* @Override
     public void onRowHeaderDoubleClicked(@NonNull RecyclerView.ViewHolder rowHeaderView, int row) {
 
-    }
+    }*/
 
     /**
      * Called when user long press any row header item.
