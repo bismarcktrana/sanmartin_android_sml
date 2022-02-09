@@ -1,4 +1,4 @@
-#Mon Feb 07 17:15:02 CST 2022
+#Tue Feb 08 14:39:51 CST 2022
 base.2=D\:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes3.dex
 path.2=classes3.dex
 base.1=D\:\\Desarrollo de Software\\Clientes\\sanmartin\\sml\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes2.dex

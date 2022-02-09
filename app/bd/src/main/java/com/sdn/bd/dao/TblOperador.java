@@ -13,7 +13,7 @@ public class TblOperador {
     private static final String SQLNuevoid = "Select (ifnull(max(id),0))+1 AS ID  from operador";
     private static final String SQLClearTable = "DELETE from operador WHERE id>0";
     private static final String SQLObtenerTodosRegistros = "SELECT id,usuario,clave,nombre,tipo FROM operador";
-    private static final String SQLObtenerTodosMenosAdminsitrador = "SELECT id,usuario,clave,nombre,tipo FROM operador WHERE tipo!=1";
+    private static final String SQLObtenerTodosMenosAdminsitrador = "SELECT id,usuario,clave,nombre,tipo FROM operador";// WHERE tipo!=1
     private static final String SQLObtenerRegistros = "SELECT id,usuario,clave,nombre,tipo FROM operador WHERE tipo=?";
     private static final String SQLLogin = "SELECT id,usuario,clave,nombre,tipo  FROM operador  WHERE usuario=? AND clave=?";
     private static final String SQLObtenerRegistro = "SELECT id,usuario,clave,nombre,tipo  FROM operador  WHERE usuario=?";

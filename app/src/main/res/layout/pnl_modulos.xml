@@ -24,7 +24,7 @@
                 android:layout_marginLeft="@dimen/button_icon_margin"
                 android:layout_marginTop="@dimen/button_icon_margin"
                 android:layout_marginBottom="@dimen/button_icon_margin"
-                android:src="@drawable/ic_action_update"
+                android:src="@drawable/ic_action_workorden"
                 app:srcCompat="@drawable/ic_action_workorden" />
 
             <TextView
@@ -69,7 +69,7 @@
                 android:layout_marginLeft="@dimen/button_icon_margin"
                 android:layout_marginTop="@dimen/button_icon_margin"
                 android:layout_marginBottom="@dimen/button_icon_margin"
-                android:src="@drawable/ic_action_update"
+                android:src="@drawable/ic_action_actualizar"
                 app:srcCompat="@drawable/ic_action_actualizar" />
 
             <TextView
@@ -114,8 +114,9 @@
                 android:layout_marginLeft="@dimen/button_icon_margin"
                 android:layout_marginTop="@dimen/button_icon_margin"
                 android:layout_marginBottom="@dimen/button_icon_margin"
-                android:src="@drawable/ic_action_update"
-                app:srcCompat="@drawable/ic_action_reporte" />
+                android:src="@drawable/ic_action_reporte"
+                app:srcCompat="@drawable/ic_action_reporte"
+                tools:ignore="ImageContrastCheck" />
 
             <TextView
                 android:layout_width="0.0dip"
@@ -159,7 +160,7 @@
                 android:layout_marginLeft="@dimen/button_icon_margin"
                 android:layout_marginTop="@dimen/button_icon_margin"
                 android:layout_marginBottom="@dimen/button_icon_margin"
-                android:src="@drawable/ic_action_update"
+                android:src="@drawable/ic_action_usuario"
                 app:srcCompat="@drawable/ic_action_usuario" />
 
             <TextView
@@ -204,7 +205,8 @@
                 android:layout_marginLeft="@dimen/button_icon_margin"
                 android:layout_marginTop="@dimen/button_icon_margin"
                 android:layout_marginBottom="@dimen/button_icon_margin"
-                android:src="@drawable/ic_action_update" />
+                android:src="@drawable/ic_action_update"
+                app:srcCompat="@drawable/ic_action_update" />
 
             <TextView
                 android:layout_width="0.0dip"

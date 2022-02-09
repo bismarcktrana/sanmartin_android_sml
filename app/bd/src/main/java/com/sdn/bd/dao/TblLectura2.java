@@ -89,6 +89,20 @@ public class TblLectura2 {
         return resultado > 0;
     }
 
+    public static boolean modificar(Context contexto, String barra) {
+        long resultado = -1;
+        String[] args = new String[]{"" + barra};
+
+        ContentValues nuevoRegistro = new ContentValues();
+        nuevoRegistro.put("_enviado", 1);
+
+        BDLocal.abrir(contexto);
+        resultado = BDLocal.BD_SQLITE.update("Lectura2", nuevoRegistro, "barra=?", args);
+        BDLocal.cerrar();
+
+        return resultado > 0;
+    }
+
     public static ArrayList<Lectura2> obtenerRegistros(Context contexto, int idtipooperador) {
         String SQLTEMP = "SELECT id,idproducto,barra,fecha_empaque,fecha_proceso,peso_libra,peso_kilogramo,lote,serie,cant_pieza,um,_idoperador,_enviado FROM lectura2";
         ArrayList<Lectura2> registros = new ArrayList<Lectura2>();

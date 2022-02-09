@@ -48,7 +48,7 @@
             android:textColor="@color/colorGreed"
             android:textSize="12sp"
             android:textStyle="bold"
-            tools:text="pESO EN KILOGRAMO: " />
+            tools:text="PESO EN KILOGRAMO: " />
 
     </RelativeLayout>
 

@@ -40,33 +40,7 @@ public class Frm_IniciarSesion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Utils.createWorkDirectory(Frm_IniciarSesion.this,"sml");
-        //ConfApp.createDirectoryWork(Frm_IniciarSesion.this);
         ConfApp.loadParameters(Frm_IniciarSesion.this);
-/*
-        String appDirPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/SML";
-        File dir_temp = new File(appDirPath);
-        dir_temp.setExecutable(true);
-        dir_temp.setWritable(true);
-        dir_temp.setReadable(true);
-        dir_temp.setLastModified(new Date().getTime());
-
-        if(dir_temp.isDirectory()){
-            System.out.println("Si es un directorio");
-            if(!dir_temp.exists()){
-                dir_temp.mkdirs();
-            }
-        }else{
-            System.out.println("No es un directorio");
-        }*/
-
-
-
-       // Utils.sendSamba(Frm_IniciarSesion.this);
-       // ConfApp.loadConection();
-        //Lectura2  lectura= Utils.DividirCodigo("010000000000598211151112320304255610000209032194998905");
-        //System.out.println("Lectura "+lectura.toString2());
-       // ConfApp.print2();
-
 
         setContentView(R.layout.frm_iniciar_sesion);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);

@@ -1298,6 +1298,7 @@ color frm_backgroudcolor
 color header_split_color
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color ic_launcher_background
 color light_gray
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
@@ -2510,7 +2511,6 @@ drawable ic_acton_importar
 drawable ic_clock_black_24dp
 drawable ic_down
 drawable ic_keyboard_black_24dp
-drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_m3_chip_check
 drawable ic_m3_chip_checked_circle
@@ -3381,6 +3381,7 @@ menu mnu_escaneolibre
 menu mnu_ingreso
 menu mnu_principal
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
 raw beep_msg_error
@@ -3524,6 +3525,10 @@ string material_timepicker_text_input_mode_description
 string mnu_borrar
 string mnu_borrartodo
 string mnu_exportar
+string msbox_enviar
+string msbox_reenviar
+string msbox_titulo_enviar
+string msbox_titulo_enviar_error
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
 string mtrl_exceed_max_badge_number_content_description

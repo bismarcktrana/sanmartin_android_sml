@@ -36,7 +36,7 @@
         android:id="@+id/p11_lblNoOrden"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ORDEN: 104025 NORTHEESSTESSS"
+        android:text="ORDEN:"
         android:textColor="@color/cell_text_color"
         android:textSize="14sp"
         android:textStyle="bold" />
@@ -45,7 +45,7 @@
         android:id="@+id/p11_lblCliente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CLIENTE:MONTE ROSA"
+        android:text="CLIENTE:"
         android:textColor="@color/cell_text_color"
         android:textSize="14sp"
         android:textStyle="bold" />

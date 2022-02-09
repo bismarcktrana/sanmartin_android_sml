@@ -6,6 +6,7 @@ import android.os.AsyncTask;
 import android.os.Environment;
 import android.util.Log;
 
+import com.sdn.bd.dao.TblLectura2;
 import com.sdn.bd.dao.TblParametro;
 import com.sdn.bd.local.BDUtil;
 import com.sdn.slp.igu.FrmEscaneoLibre;
@@ -16,9 +17,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.net.MalformedURLException;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
-import jcifs.smb.NtlmPasswordAuthentication;
 import jcifs.smb.SmbException;
 import jcifs.smb.SmbFile;
 import jcifs.smb.SmbFileInputStream;
@@ -36,13 +38,14 @@ public class ExportarExcelAndSamba extends AsyncTask<String, String, String> {
     String NombreArchivo;
     String SQLQUERYDETALLE="";
     String SQLQUERYCONSOLIDADO="";
+    boolean RESPUESTA=false;
 
     public ExportarExcelAndSamba(Context formulario, String NombreArchivo) {
         referencia = formulario;
         this.NombreArchivo = NombreArchivo;
         SQLQUERYDETALLE="SELECT L.idproducto,P.nombre,L.fecha_proceso,(CASE WHEN (L.um==0) THEN 'KILOGRAMO' ELSE 'LIBRAS' END) AS UNIDAD_MEDIDA,L.peso_libra AS  PESO_LIBRA,L.peso_kilogramo AS  PESO_KILOGRAMO,L.barra\n" +
                 "FROM Lectura2 AS L LEFT JOIN Producto AS P ON L.idproducto=P.codigo\n" +
-                "WHERE L._idoperador=" + ConfApp.OPERADORLOGEADO.getId();
+                "WHERE L._idoperador=" + ConfApp.OPERADORLOGEADO.getId()+"  AND L._enviado=0";
 
         SQLQUERYCONSOLIDADO = "SELECT L.idproducto AS CODIGO,P.nombre,count(L.id) AS CAJAS,  SUM(L.peso_libra) AS  PESO_LIBRA,SUM(L.peso_kilogramo) AS  PESO_KILOGRAMO \n" +
                 "FROM Lectura2 AS L LEFT JOIN Producto AS P ON L.idproducto=P.codigo\n" +
@@ -56,9 +59,7 @@ public class ExportarExcelAndSamba extends AsyncTask<String, String, String> {
 */
     @Override
     protected String doInBackground(String... params) { //TblParametro.getClave(context,"ExcelFile")     ,TblParametro.getClave(getApplicationContext(),"ExcelFile")
-        String sFileName = this.NombreArchivo;// NombreArchivo;//Utils.ConvertToNameDate(new Date());  //TblParametro.getClave(FrmExportar.this  ,"ExcelFile");
-        //String sFileName2 = sFileName;
-        sFileName += ".xls";
+        String sFileName = this.NombreArchivo+".xls";// NombreArchivo;//Utils.ConvertToNameDate(new Date());  //TblParametro.getClave(FrmExportar.this  ,"ExcelFile");
         File DirectorioLocalAutorizado = (Utils.isUserValidPath(referencia, "HostLocal") ? new File(TblParametro.getClave(referencia, "HostLocal")) : Environment.getExternalStorageDirectory());
         File gpxfile = new File(DirectorioLocalAutorizado, sFileName);
 
@@ -75,9 +76,10 @@ public class ExportarExcelAndSamba extends AsyncTask<String, String, String> {
                 fileOut.close();
                 myWorkBook.close();*/
 
-                ExportarFicheroLocal(this.NombreArchivo);
-               // Utils.notifyToAndroidCreation(referencia,gpxfile);
-                ExportarFicheroRemoto(this.NombreArchivo + ".txt");
+               //
+                ExportarFicheroLocal(NombreArchivo+ ".txt");
+                RESPUESTA = ExportarFicheroRemoto(NombreArchivo + ".txt");
+
                 //ExportarFicheroRemoto(sFileName2 + ".xls");
                 //TblLectura2.vaciarTabla(referencia);
             } catch (Exception e) {
@@ -86,15 +88,10 @@ public class ExportarExcelAndSamba extends AsyncTask<String, String, String> {
 
         } else {
             System.out.println("No se encuentra" + gpxfile.getAbsolutePath());
-
             //Toast.makeText(getApplicationContext(),"No se encuentra"+gpxfile.getAbsolutePath(),Toast.LENGTH_SHORT).show();
         }
 
         return "";
-    }
-
-    public void guardarHojaDeCalculo(String path) {
-
     }
 
     @Override
@@ -108,7 +105,11 @@ public class ExportarExcelAndSamba extends AsyncTask<String, String, String> {
     protected void onPostExecute(String result) {
         // execution of result of Long time consuming operation
         progressDialog.dismiss();
-        ((FrmEscaneoLibre)(referencia)).eliminarEnviados();
+        if (RESPUESTA){//SI SE LOGRO ENVIAR EL ARCHIVO
+            ((FrmEscaneoLibre)(referencia)).eliminarEnviados();
+        }else{
+            ((FrmEscaneoLibre)(referencia)).IntentarReenvio(this.NombreArchivo);
+        }
     }
 
     @Override
@@ -163,11 +164,10 @@ public class ExportarExcelAndSamba extends AsyncTask<String, String, String> {
      * EXPORTAR A ARCHIVOS DE TEXTO LOCAL
      */
     public boolean ExportarFicheroLocal(String sFileNamex) {
-        String sFileName = sFileNamex+".txt";
         File DirectorioLocalAutorizado = (Utils.isUserValidPath(referencia, "HOST_LOCATION") ? new File(TblParametro.getClave(referencia, "HOST_LOCATION")) : Environment.getExternalStorageDirectory());
-        File gpxfile = new File(DirectorioLocalAutorizado, sFileName);
+        File gpxfile = new File(DirectorioLocalAutorizado, sFileNamex);
 
-        toppings[0] = "Creado Archivo";
+        toppings[0] = "Creado Archivo Local";
         toppings[1] = gpxfile.getAbsolutePath();
         publishProgress(toppings);
 
@@ -184,6 +184,7 @@ public class ExportarExcelAndSamba extends AsyncTask<String, String, String> {
                     fout.write(codigos.get(i).get(6).toString()+"\r\n");
                     toppings[0] = "Creado Archivo";
                     toppings[1] = gpxfile.getAbsolutePath() + " Registro" + (i);
+                    TblLectura2.modificar(referencia,codigos.get(i).get(6).toString());
                     publishProgress(toppings);
                 }
             }
@@ -201,43 +202,31 @@ public class ExportarExcelAndSamba extends AsyncTask<String, String, String> {
      * EXPORTAR A ARCHIVOS DE TEXTO A SERVIDOR SAMBA
      */
     public boolean ExportarFicheroRemoto(String sFileNamex) {
-        //VM-DESARROLLO/Users/Public
-
-      //  String DirectorioLocal = Utils.isUserValidPath(referencia, "HOST_LOCATION") ? TblParametro.getClave(referencia, "HOST_LOCATION") : Environment.getExternalStorageDirectory().getAbsolutePath();
-        String DirectorioRemoto = "smb:"+TblParametro.getClave(referencia, "SERVER_SMB"); //Utils.isUserValidPath(referencia, "SERVER_SMB") ? TblParametro.getClave(referencia, "SERVER_SMB") : Environment.getExternalStorageDirectory().getAbsolutePath();
-        NtlmPasswordAuthentication auth = new NtlmPasswordAuthentication(
-                null,
-                "smb",
-                "2212"
-        );
-
-        File archivoOrigen = null;
-        SmbFile archivoDestino = null;
-        FileInputStream fis = null;
-        SmbFileOutputStream fos = null;
-
-        SmbFile ArchivoDestino;
-        SmbFile DirectorioDestino ;
-
-      //  mostarMensaje("Crear Fichero en red", DirectorioRemoto + File.separator + sFileNamex);
+        File ArchivoOrigen = new File(TblParametro.getClave(referencia, "HOST_LOCATION")+ File.separator +sFileNamex);
+        String UrlRemoto = "smb:"+TblParametro.getClave(referencia, "SERVER_SMB"); //Utils.isUserValidPath(referencia, "SERVER_SMB") ? TblParametro.getClave(referencia, "SERVER_SMB") : Environment.getExternalStorageDirectory().getAbsolutePath();
+        SmbFile CarpetaDestino,ArchivoDestino ;
+       // NtlmPasswordAuthentication auth = new NtlmPasswordAuthentication( null, "smb", "2212" );
 
         try {
-            //String Ubicacion_Servidor = "smb://192.168.1.8/server2";
-            archivoOrigen = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "1234.txt");//sFileNamex
-         //   archivoDestino = new SmbFile(DirectorioRemoto + File.separatorChar + sFileNamex, auth);
+            CarpetaDestino = new SmbFile(UrlRemoto);
+            ArchivoDestino = new SmbFile(UrlRemoto+"/"+sFileNamex);
 
-            DirectorioDestino = new SmbFile(Ubicacion_Servidor);
-            ArchivoDestino = new SmbFile(Ubicacion_Servidor + "/1234.txt",auth);
-
-            System.out.println("Existe el archivo de origin " +archivoOrigen.exists());
-
-            if (DirectorioDestino.exists()) {
-                if (!ArchivoDestino.exists())
+            if (CarpetaDestino.exists()) {
+                if (!ArchivoDestino.exists()){
                     ArchivoDestino.createNewFile();
+                }
+
                 ArchivoDestino.connect();
-                copiarFicheroAUnidad(archivoOrigen,ArchivoDestino);
+                EnviarArchivoAlServidor(ArchivoOrigen,ArchivoDestino);
+                //ArrayList<ArrayList> codigos = BDUtil.executeQuery(referencia, SQLQUERYDETALLE);
+                //EnviarArrayAlServidor(codigos,ArchivoDestino);
+               //
+
+                return true;
             } else {
-                //resp = "Red Local desconetada o no cuenta con permisos";
+                toppings[0] = "Carpeta no existe" + CarpetaDestino.toString();
+                toppings[1] = "La carpeta de destino solicitada " + CarpetaDestino.toString()+", no esta disponible";
+                publishProgress(toppings);
             }
         }catch (MalformedURLException e) {
             e.printStackTrace();
@@ -252,8 +241,7 @@ public class ExportarExcelAndSamba extends AsyncTask<String, String, String> {
         return false;
     }
 
-
-    public void copiarFicheroDesdeUnidad (SmbFile in, File out){
+    public void RecibirArchivoDelServidor(SmbFile in, File out){
         SmbFileInputStream fis = null;
         FileOutputStream fos = null;
 
@@ -275,7 +263,7 @@ public class ExportarExcelAndSamba extends AsyncTask<String, String, String> {
         }
     }
 
-    public void copiarFicheroAUnidad (File in, SmbFile out){
+    public void EnviarArchivoAlServidor(File in, SmbFile out){
         FileInputStream fis = null;
         SmbFileOutputStream fos = null;
 
@@ -289,6 +277,7 @@ public class ExportarExcelAndSamba extends AsyncTask<String, String, String> {
             while ((i=fis.read(buf)) != -1)
             {
                 fos.write(buf, 0, i);
+                System.out.println(String.valueOf(buf));
             }
             fis.close();
             fos.close();
@@ -298,6 +287,32 @@ public class ExportarExcelAndSamba extends AsyncTask<String, String, String> {
             e.printStackTrace();
         }
     }
+
+    public void EnviarArrayAlServidor(ArrayList<ArrayList> codigos, SmbFile out){
+        SmbFileOutputStream fos = null;
+        Charset charset = StandardCharsets.US_ASCII;
+
+
+        try
+        {
+            String codigobarra ="";
+            fos = new SmbFileOutputStream(out);
+
+            for (int it=0 ; it< codigos.size();it++){
+                codigobarra = codigos.get(it).get(6).toString()+"\r\n".getBytes();
+                byte[] byteArrray = charset.encode(codigobarra).array();
+                fos.write(byteArrray);
+                fos.flush();
+                TblLectura2.modificar(referencia,codigobarra);
+            }
+            fos.close();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
 
     private void mostarMensaje(String msg1, String msg2) {
         toppings[0] = msg1;

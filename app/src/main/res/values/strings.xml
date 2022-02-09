@@ -53,7 +53,12 @@
     <string name="lblSincronizar">SINCRONIZAR</string>
     <string name="lblEscaneoLibre">ESCANEO LIBRE</string>
     <string name="buscar_usuario">Buscar por nombre de usuario</string>
+
+    <string name="msbox_titulo_enviar">Enviar Archivo</string>
     <string name="lblNombreArchivo">Nombre del archivo</string>
+    <string name="msbox_enviar">Desea enviar los codigos escaneados al servidor?</string>
+    <string name="msbox_reenviar">El envio del archivo [%s] al servidor [%s], ha fallado. <BR/>Desea reinternarlo nuevamente?.</string>
+    <string name="msbox_titulo_enviar_error">Error de Operacion</string>
 
 
 </resources>

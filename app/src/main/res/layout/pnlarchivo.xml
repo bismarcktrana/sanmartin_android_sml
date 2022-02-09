@@ -5,25 +5,18 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp">
+        android:layout_marginRight="10dp">
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/pnl1_txtNombreArchivo"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:background="@android:drawable/editbox_background"
-            android:drawableLeft="@drawable/ic_action_workorden"
+            android:layout_height="wrap_content"
             android:hint="@string/lblNombreArchivo"
-            android:imeOptions="actionNext"
             android:inputType="text"
-            android:maxLines="1"
-            android:paddingStart="5dp"
-            android:singleLine="true"
             android:textColor="@color/colorPrimary"
-            android:textColorHighlight="@android:color/black"
-            android:textColorHint="@android:color/black" />
+            android:textColorHint="@color/zebra_blue" />
     </com.google.android.material.textfield.TextInputLayout>
 </FrameLayout>

@@ -88,33 +88,6 @@ public class FrmEscaneoLibre extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    public void NombredeArchivo() {
-        LayoutInflater inflater = this.getLayoutInflater();
-        AlertDialog.Builder builder = new AlertDialog.Builder(FrmEscaneoLibre.this);
-        builder.setTitle(R.string.app_descripcion);
-        View viewInflated = inflater.inflate(R.layout.pnlarchivo, null);
-
-        final EditText input = (EditText) viewInflated.findViewById(R.id.pnl1_txtNombreArchivo);
-        builder.setView(viewInflated);
-
-        builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                String nombre =input.getText().toString().trim();
-                new ExportarExcelAndSamba(FrmEscaneoLibre.this, nombre).execute("Exportando Datos", "Preparando datos");
-                dialog.dismiss();
-            }
-        });
-        builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
-            }
-        });
-
-        builder.show();
-    }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -123,9 +96,10 @@ public class FrmEscaneoLibre extends AppCompatActivity {
 
             if (tbltempo.getRowCount() > 0) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setMessage("Desea exportar los datos?")
+                builder.setMessage(getResources().getString(R.string.msbox_enviar).toUpperCase())
+                        .setIcon(R.drawable.img_logo)
                         .setCancelable(false)
-                        .setTitle("Exportar Archivo")
+                        .setTitle(getResources().getString(R.string.msbox_titulo_enviar))
                         .setNegativeButton("NO", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 dialog.cancel();
@@ -135,12 +109,9 @@ public class FrmEscaneoLibre extends AppCompatActivity {
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int id) {
                                         runOnUiThread(new Runnable() {
-
                                             @Override
                                             public void run() {
                                             NombredeArchivo();
-
-
                                             }
                                         });
                                     }
@@ -221,7 +192,6 @@ public class FrmEscaneoLibre extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -262,7 +232,7 @@ public class FrmEscaneoLibre extends AppCompatActivity {
         inputSearch = findViewById(R.id.p12_txtSearchDetalle);
 
         try {
-            duracion = Integer.parseInt(TblParametro.getClave(FrmEscaneoLibre.this, "Timer"));
+            duracion = Integer.parseInt(TblParametro.getClave(FrmEscaneoLibre.this, "TIMER_SCREEN_WAIT"));
         } catch (Exception e) {
             duracion = 3000;
         }
@@ -301,17 +271,71 @@ public class FrmEscaneoLibre extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                tableViewFilter.set(4, s.toString());
+                tableViewFilter.set(6, s.toString());
             }
 
             @Override
             public void afterTextChanged(Editable s) {
             }
         });
+
         configurarSonido();
         cargarConsolidado();
         cargarDetalle();
         limpiarFormulario();
+    }
+
+    public void IntentarReenvio(String nombreArchivo) {
+        LayoutInflater inflater = this.getLayoutInflater();
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(FrmEscaneoLibre.this);
+        dialogBuilder.setTitle(getResources().getString(R.string.msbox_titulo_enviar_error));
+        dialogBuilder.setMessage(String.format(getResources().getString(R.string.msbox_reenviar),nombreArchivo+".txt",TblParametro.getClave(FrmEscaneoLibre.this,"SERVER_SMB")));
+        dialogBuilder.setIcon(R.drawable.img_logo);
+
+        dialogBuilder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                new ExportarExcelAndSamba(FrmEscaneoLibre.this, nombreArchivo).execute("Exportando Datos", "Preparando datos");
+                dialog.dismiss();
+            }
+        });
+        dialogBuilder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        dialogBuilder.show();
+    }
+
+    public void NombredeArchivo() {
+        LayoutInflater inflater = this.getLayoutInflater();
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(FrmEscaneoLibre.this);
+        dialogBuilder.setTitle(R.string.msbox_titulo_enviar);
+        dialogBuilder.setIcon(R.drawable.img_logo);
+
+        View viewInflated = inflater.inflate(R.layout.pnlarchivo, null);
+        final EditText input = (EditText) viewInflated.findViewById(R.id.pnl1_txtNombreArchivo);
+        dialogBuilder.setView(viewInflated);
+
+        dialogBuilder.setPositiveButton("CONTINUAR", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                String nombre =input.getText().toString().trim();
+                new ExportarExcelAndSamba(FrmEscaneoLibre.this, nombre).execute("Exportando Datos", "Preparando datos");
+                dialog.dismiss();
+            }
+        });
+
+        dialogBuilder.setNegativeButton("CANCELAR", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        dialogBuilder.show();
     }
 
     private void setItemsOnTab() {
@@ -356,11 +380,9 @@ public class FrmEscaneoLibre extends AppCompatActivity {
                     cargarConsolidado();
                     toolbar.getMenu().findItem(R.id.p12_item_exportarlocal).setVisible(TblModelDetalle.getRowCount() > 0);
                 } else {
-                    //mostrarTimerInmediatamente();
                     limpiarFormulario();
                 }
                 Utils.setTabColor(tabs, FrmEscaneoLibre.this);
-
                 // Add code Here
             }
         });
@@ -534,11 +556,11 @@ public class FrmEscaneoLibre extends AppCompatActivity {
 
         lblCantidadCajasTotales.setText(CAJA_TOTAL + " CAJAS ESCANEADAS");
         lblLbsEscaneadas.setText(String.format("%.2f", PESO_TOTAL_LIBRAS) + " LBS ESCANEADAS");
-        lblkgsEscaneadas.setText(String.format("%.2f", PESO_TOTAL_KILOGRAMOS) + " LBS ESCANEADAS");
+        lblkgsEscaneadas.setText(String.format("%.2f", PESO_TOTAL_KILOGRAMOS) + " KGS ESCANEADAS");
     }
 
     private void cargarDetalle() {
-        String SQLQUERY="SELECT L.idproducto,P.nombre,L.fecha_proceso,(CASE WHEN (L.um==0) THEN 'KILOGRAMO' ELSE 'LIBRAS' END) AS UNIDAD_MEDIDA,L.peso_libra AS  PESO_LIBRA,L.peso_kilogramo AS  PESO_KILOGRAMO,L.barra\n" +
+        String SQLQUERY="SELECT L.idproducto,P.nombre,L.fecha_proceso,(CASE WHEN (L.um==0) THEN 'KILOGRAMO' ELSE 'LIBRAS' END) AS UNIDAD_MEDIDA,L.peso_libra AS  PESO_LIBRA,L.peso_kilogramo AS  PESO_KILOGRAMO,L.barra,L._enviado\n" +
         "FROM Lectura2 AS L LEFT JOIN Producto AS P ON L.idproducto=P.codigo\n" +
         "WHERE L._idoperador=" + ConfApp.OPERADORLOGEADO.getId();
 
@@ -641,5 +663,6 @@ public class FrmEscaneoLibre extends AppCompatActivity {
      * METODO DE NOTIFICAICON DEL HILO EXPORTAR
      */
     public void eliminarEnviados() {
+    TblLectura2.borrarEnviados(FrmEscaneoLibre.this);
     }
 }

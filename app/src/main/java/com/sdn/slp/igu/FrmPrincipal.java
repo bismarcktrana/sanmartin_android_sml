@@ -57,7 +57,7 @@ public class FrmPrincipal extends AppCompatActivity {
         setSupportActionBar(myToolbar);
 
         ((TextView) findViewById(R.id.p02_registro)).setText(ConfApp.UUID_FROM_DEVICE);
-        ((TextView) findViewById(R.id.p02_lblInfoEquipo)).setText(ConfApp.USER_DTS ?"dts": (ConfApp.OPERADORLOGEADO.getTipo()==1?"Administrador":"Operador")  );
+        ((TextView) findViewById(R.id.p02_lblInfoEquipo)).setText(ConfApp.USER_DTS ?"dts": (ConfApp.OPERADORLOGEADO.getTipo()==1?"Supervisor":"Operador")  );
         ((TextView) findViewById(R.id.p02_lblinfooperador)).setText(ConfApp.USER_DTS ?"dts":ConfApp.OPERADORLOGEADO.getNombre());
 
         txtestado = (TextView) findViewById(R.id.p02_txt_conectado);
@@ -95,6 +95,12 @@ public class FrmPrincipal extends AppCompatActivity {
         if(!ConfApp.USER_DTS){
             RemoverVista(dialogView,R.id.optdts);
         }
+
+        if(!ConfApp.USER_SUPERVISOR){
+            RemoverVista(dialogView,R.id.optsincronizar);
+            RemoverVista(dialogView,R.id.optreportes);
+            RemoverVista(dialogView,R.id.optusuario);
+        }
     }
 
     @Override
@@ -118,18 +124,17 @@ public class FrmPrincipal extends AppCompatActivity {
         mostrarListaUsuarios();
     }
 
-
     private void mostrarListaUsuarios() {
         final RelativeLayout panel = (RelativeLayout) LayoutInflater.from(FrmPrincipal.this).inflate(R.layout.frm_usuario, null);
-        AlertDialog.Builder componente = new AlertDialog.Builder(FrmPrincipal.this);//,R.style.MyAlertDialogStyle //builder.setIcon(R.drawable.ic_large_wireless);
+        AlertDialog.Builder componente = new AlertDialog.Builder(FrmPrincipal.this);
 
         final ImageButton btnAgrearUsuario = panel.findViewById(R.id.btnAgregarUsuario);
-        btnAgrearUsuario.setVisibility((ConfApp.USER_DTS || ConfApp.USER_ESTIBADOR) ? View.VISIBLE : View.INVISIBLE);
+        btnAgrearUsuario.setVisibility((ConfApp.USER_DTS || ConfApp.USER_SUPERVISOR) ? View.VISIBLE : View.INVISIBLE);
 
-        componente.setCancelable(true);
+        componente.setCancelable(false);     //builder.setTitle("Seleccionar Frente");
 
-        final Vector<Operador> ListUsuarios = TblOperador.obtenerRegistrosSistema(FrmPrincipal.this);
-        adapter_usuarios = new ArrayAdapter<Operador>(this, R.layout.item_usuario, R.id.i05_lblnombre, Collections.list(ListUsuarios.elements()));
+        final Vector<Operador> listFrente = TblOperador.obtenerRegistrosSistema(FrmPrincipal.this);
+        adapter_usuarios = new ArrayAdapter<Operador>(this, R.layout.item_usuario, R.id.i05_lblnombre, Collections.list(listFrente.elements()));
         lv_usuario = panel.findViewById(R.id.list_view);
         lv_usuario.setTextFilterEnabled(true);
         lv_usuario.setAdapter(adapter_usuarios);
@@ -192,8 +197,8 @@ public class FrmPrincipal extends AppCompatActivity {
         final Spinner cbxCombo = dialogView.findViewById(R.id.pnl3_cbxTipo);
 
         List<String> categories = new ArrayList<String>();
-        categories.add("Estibador");
-        categories.add("Verificador");
+        categories.add("Supervisor");
+        categories.add("Operario");
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         cbxCombo.setAdapter(dataAdapter);
@@ -204,10 +209,10 @@ public class FrmPrincipal extends AppCompatActivity {
 
         switch (operador.getTipo()) {
             case 2:
-                cbxCombo.setSelection(0);
+                cbxCombo.setSelection(1);
                 break;
             default:
-                cbxCombo.setSelection(1);
+                cbxCombo.setSelection(0);
                 break;
         }
 
@@ -215,13 +220,13 @@ public class FrmPrincipal extends AppCompatActivity {
         dialogBuilder.setTitle(Html.fromHtml("<font color='#FF7F27'>" + (operador.getId() == -1 ? "Crear Usuario" : (Crear) ? "Modificar Usuario" : "Ver Usuario") + "</font>"));
         dialogBuilder.setMessage("Informacion de Usuario");
 
-        if (ConfApp.USER_DTS || ConfApp.USER_ESTIBADOR) {
+        if (ConfApp.USER_DTS ||  ConfApp.USER_SUPERVISOR) {
             dialogBuilder.setPositiveButton("Guardar", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int whichButton) {
                     operador.setUsuario(txtusuario.getText().toString());
                     operador.setClave(txtclave.getText().toString().trim());
                     operador.setNombre(txtNombre.getText().toString().trim());
-                    operador.setTipo(cbxCombo.getSelectedItemPosition() == 0 ? 2 : 3);
+                    operador.setTipo(cbxCombo.getSelectedItemPosition() == 0 ? 1 : 2);
 
                     if (operador.getId() == -1) {
                         if (txtNombre.getText().toString().trim().length() > 0 && txtusuario.getText().toString().trim().length() > 0 && txtclave.getText().toString().trim().length() > 0) {
