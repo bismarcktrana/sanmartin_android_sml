@@ -6,8 +6,8 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.os.Environment;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -20,15 +20,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.sdn.bd.dao.TblOperador;
-import com.sdn.bd.dao.TblParametro;
-import com.sdn.bd.modelo.Lectura2;
 import com.sdn.slp.controlador.Tbl_Parametro;
 import com.sdn.bd.modelo.Operador;
-import com.sdn.utils.ConfApp;
-import com.sdn.utils.Utils;
-
-import java.io.File;
-import java.util.Date;
+import com.sdn.slp.utils.ConfApp;
+import com.sdn.slp.utils.Utils;
 
 public class Frm_IniciarSesion extends AppCompatActivity {
 
@@ -39,6 +34,8 @@ public class Frm_IniciarSesion extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        ConfApp.DEBUG=true;
         Utils.createWorkDirectory(Frm_IniciarSesion.this,"sml");
         ConfApp.loadParameters(Frm_IniciarSesion.this);
 
@@ -62,6 +59,8 @@ public class Frm_IniciarSesion extends AppCompatActivity {
                 }
             }
         });
+
+
     }
 
     private void continuarComprobacion() {

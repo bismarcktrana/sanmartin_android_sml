@@ -1,4 +1,4 @@
-package com.sdn.utils;
+package com.sdn.slp.utils;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -59,27 +59,23 @@ public class ExportarExcelAndSamba extends AsyncTask<String, String, String> {
 */
     @Override
     protected String doInBackground(String... params) { //TblParametro.getClave(context,"ExcelFile")     ,TblParametro.getClave(getApplicationContext(),"ExcelFile")
-        String sFileName = this.NombreArchivo+".xls";// NombreArchivo;//Utils.ConvertToNameDate(new Date());  //TblParametro.getClave(FrmExportar.this  ,"ExcelFile");
-        File DirectorioLocalAutorizado = (Utils.isUserValidPath(referencia, "HostLocal") ? new File(TblParametro.getClave(referencia, "HostLocal")) : Environment.getExternalStorageDirectory());
-        File gpxfile = new File(DirectorioLocalAutorizado, sFileName);
+        File DirectorioLocalAutorizado = (Utils.isValidDirectory(referencia, "HOST_LOCATION") ? new File(TblParametro.getClave(referencia, "HOST_LOCATION")) : Environment.getExternalStorageDirectory());
 
-        publishProgress("Verificando ubicacion de archivo: " + gpxfile.getAbsolutePath(), "Localizando Archivo"); // Calls onProgressUpdate()
+        File Document_Excel = new File(DirectorioLocalAutorizado, this.NombreArchivo+".xls");
+        File Document_Texto = new File(DirectorioLocalAutorizado, this.NombreArchivo+".txt");
 
-        if (!gpxfile.exists()) {
-            try { // Create a workbook using the File System
-                /*HSSFWorkbook myWorkBook = new HSSFWorkbook();
+        mostarMensaje("Buscando Archivo",Document_Excel.getAbsolutePath());
+
+        if (!Document_Excel.exists()) {// Create a workbook using the File System
+            try {
+                HSSFWorkbook myWorkBook = new HSSFWorkbook();
                 crearHojaConsolidado(myWorkBook);
                 crearHojaDetalle(myWorkBook);
-                FileOutputStream fileOut = new FileOutputStream(gpxfile.getAbsolutePath());
+                FileOutputStream fileOut = new FileOutputStream(Document_Excel.getAbsolutePath());
                 myWorkBook.write(fileOut);
                 fileOut.flush();
                 fileOut.close();
-                myWorkBook.close();*/
-
-               //
-                ExportarFicheroLocal(NombreArchivo+ ".txt");
-                RESPUESTA = ExportarFicheroRemoto(NombreArchivo + ".txt");
-
+                myWorkBook.close();
                 //ExportarFicheroRemoto(sFileName2 + ".xls");
                 //TblLectura2.vaciarTabla(referencia);
             } catch (Exception e) {
@@ -87,9 +83,20 @@ public class ExportarExcelAndSamba extends AsyncTask<String, String, String> {
             }
 
         } else {
-            System.out.println("No se encuentra" + gpxfile.getAbsolutePath());
-            //Toast.makeText(getApplicationContext(),"No se encuentra"+gpxfile.getAbsolutePath(),Toast.LENGTH_SHORT).show();
+            System.out.println("No se encuentra" + Document_Excel.getAbsolutePath());
         }
+
+        if (!Document_Texto.exists()) {
+            try{
+                RESPUESTA = ExportarFicheroLocal(Document_Texto);
+            }catch (Exception e) {
+                e.printStackTrace();
+            }
+        }else{
+            System.out.println("Se encuentra" + Document_Texto.getAbsolutePath());
+        }
+
+        RESPUESTA = ExportarFicheroRemoto(Document_Texto);
 
         return "";
     }
@@ -163,8 +170,37 @@ public class ExportarExcelAndSamba extends AsyncTask<String, String, String> {
     /**
      * EXPORTAR A ARCHIVOS DE TEXTO LOCAL
      */
+
+    public boolean ExportarFicheroLocal(File Documento_Texto){
+        ArrayList<ArrayList> codigos = BDUtil.executeQuery(referencia, SQLQUERYDETALLE);
+
+        if (codigos.size() > 1) {
+            mostarMensaje("Creando Archivo",Documento_Texto.getAbsolutePath());
+
+            try{
+                OutputStreamWriter fout = new OutputStreamWriter(new FileOutputStream(Documento_Texto));
+
+                for (int i = 1; i < codigos.size(); i++) {
+                    fout.write(codigos.get(i).get(6).toString()+"\r\n");
+
+                    TblLectura2.establecerComoEnviado(referencia,codigos.get(i).get(6).toString());
+
+                    mostarMensaje("Creado Archivo",Documento_Texto.getAbsolutePath() + " Registro" + (i));
+                }
+                return  true;
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }else{
+            mostarMensaje("Archivo vacios","No existen datos para enviar");
+        }
+
+        return false;
+    }
+
+
     public boolean ExportarFicheroLocal(String sFileNamex) {
-        File DirectorioLocalAutorizado = (Utils.isUserValidPath(referencia, "HOST_LOCATION") ? new File(TblParametro.getClave(referencia, "HOST_LOCATION")) : Environment.getExternalStorageDirectory());
+        File DirectorioLocalAutorizado = (Utils.isValidDirectory(referencia, "HOST_LOCATION") ? new File(TblParametro.getClave(referencia, "HOST_LOCATION")) : Environment.getExternalStorageDirectory());
         File gpxfile = new File(DirectorioLocalAutorizado, sFileNamex);
 
         toppings[0] = "Creado Archivo Local";
@@ -184,7 +220,7 @@ public class ExportarExcelAndSamba extends AsyncTask<String, String, String> {
                     fout.write(codigos.get(i).get(6).toString()+"\r\n");
                     toppings[0] = "Creado Archivo";
                     toppings[1] = gpxfile.getAbsolutePath() + " Registro" + (i);
-                    TblLectura2.modificar(referencia,codigos.get(i).get(6).toString());
+                    TblLectura2.establecerComoEnviado(referencia,codigos.get(i).get(6).toString());
                     publishProgress(toppings);
                 }
             }
@@ -201,6 +237,13 @@ public class ExportarExcelAndSamba extends AsyncTask<String, String, String> {
     /**
      * EXPORTAR A ARCHIVOS DE TEXTO A SERVIDOR SAMBA
      */
+
+    public boolean ExportarFicheroRemoto(File Documento_Texto){
+        String UrlRemoto = "smb:"+TblParametro.getClave(referencia, "SERVER_SMB");
+
+        return true;
+    }
+
     public boolean ExportarFicheroRemoto(String sFileNamex) {
         File ArchivoOrigen = new File(TblParametro.getClave(referencia, "HOST_LOCATION")+ File.separator +sFileNamex);
         String UrlRemoto = "smb:"+TblParametro.getClave(referencia, "SERVER_SMB"); //Utils.isUserValidPath(referencia, "SERVER_SMB") ? TblParametro.getClave(referencia, "SERVER_SMB") : Environment.getExternalStorageDirectory().getAbsolutePath();
@@ -303,7 +346,7 @@ public class ExportarExcelAndSamba extends AsyncTask<String, String, String> {
                 byte[] byteArrray = charset.encode(codigobarra).array();
                 fos.write(byteArrray);
                 fos.flush();
-                TblLectura2.modificar(referencia,codigobarra);
+                TblLectura2.establecerComoEnviado(referencia,codigobarra);
             }
             fos.close();
         }
@@ -314,9 +357,9 @@ public class ExportarExcelAndSamba extends AsyncTask<String, String, String> {
     }
 
 
-    private void mostarMensaje(String msg1, String msg2) {
-        toppings[0] = msg1;
-        toppings[1] = msg2;
+    private void mostarMensaje(String Titulo, String Mensaje) {
+        toppings[0] = Titulo;
+        toppings[1] = Mensaje;
         publishProgress(toppings);
     }
 }

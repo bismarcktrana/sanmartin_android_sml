@@ -4,39 +4,14 @@ com/sdn/slp/igu/databinding/PnlModulosBinding.java
  com.sdn.slp.igu.databinding.PnlModulosBinding
 com/sdn/slp/igu/databinding/FrmPrincipalBinding.java
  com.sdn.slp.igu.databinding.FrmPrincipalBinding
-com/sdn/utils/Utils.java
- com.sdn.utils.Utils
-com/sdn/slp/igu/Frm_IniciarSesion.java
- com.sdn.slp.igu.Frm_IniciarSesion
- com.sdn.slp.igu.Frm_IniciarSesion$1
- com.sdn.slp.igu.Frm_IniciarSesion$2
- com.sdn.slp.igu.Frm_IniciarSesion$3
- com.sdn.slp.igu.Frm_IniciarSesion$4
- com.sdn.slp.igu.Frm_IniciarSesion$5
+com/sdn/slp/igu/databinding/FragmentTabDetalleBinding.java
+ com.sdn.slp.igu.databinding.FragmentTabDetalleBinding
 com/sdn/slp/igu/databinding/PnlIngresoBinding.java
  com.sdn.slp.igu.databinding.PnlIngresoBinding
 com/sdn/slp/controlador/Tbl_Parametro.java
  com.sdn.slp.controlador.Tbl_Parametro
 com/sdn/slp/controlador/Tbl_Operador.java
  com.sdn.slp.controlador.Tbl_Operador
-com/sdn/utils/ConfApp.java
- com.sdn.utils.ConfApp
-com/sdn/slp/igu/FrmBaseDeDatos.java
- com.sdn.slp.igu.FrmBaseDeDatos
- com.sdn.slp.igu.FrmBaseDeDatos$1
- com.sdn.slp.igu.FrmBaseDeDatos$2
- com.sdn.slp.igu.FrmBaseDeDatos$3
- com.sdn.slp.igu.FrmBaseDeDatos$4
-com/sdn/slp/igu/databinding/PnlarchivoBinding.java
- com.sdn.slp.igu.databinding.PnlarchivoBinding
-com/sdn/slp/igu/BuildConfig.java
- com.sdn.slp.igu.BuildConfig
-com/sdn/slp/igu/databinding/FrmBaseDeDatosBinding.java
- com.sdn.slp.igu.databinding.FrmBaseDeDatosBinding
-com/sdn/slp/igu/databinding/PnlUsuarioBinding.java
- com.sdn.slp.igu.databinding.PnlUsuarioBinding
-com/sdn/slp/igu/databinding/FrmEscaneoLibreBinding.java
- com.sdn.slp.igu.databinding.FrmEscaneoLibreBinding
 com/sdn/slp/igu/FrmPrincipal.java
  com.sdn.slp.igu.FrmPrincipal
  com.sdn.slp.igu.FrmPrincipal$1
@@ -51,6 +26,20 @@ com/sdn/slp/igu/FrmPrincipal.java
  com.sdn.slp.igu.FrmPrincipal$7
  com.sdn.slp.igu.FrmPrincipal$8
  com.sdn.slp.igu.FrmPrincipal$9
+com/sdn/slp/igu/databinding/PnlarchivoBinding.java
+ com.sdn.slp.igu.databinding.PnlarchivoBinding
+com/sdn/slp/igu/BuildConfig.java
+ com.sdn.slp.igu.BuildConfig
+com/sdn/slp/igu/databinding/FragmentTabConsolidadoBinding.java
+ com.sdn.slp.igu.databinding.FragmentTabConsolidadoBinding
+com/sdn/slp/igu/databinding/FrmBaseDeDatosBinding.java
+ com.sdn.slp.igu.databinding.FrmBaseDeDatosBinding
+com/sdn/slp/igu/databinding/PnlUsuarioBinding.java
+ com.sdn.slp.igu.databinding.PnlUsuarioBinding
+com/sdn/slp/igu/databinding/FrmEscaneoLibreBinding.java
+ com.sdn.slp.igu.databinding.FrmEscaneoLibreBinding
+com/sdn/slp/igu/databinding/FragmentTabLecturaBinding.java
+ com.sdn.slp.igu.databinding.FragmentTabLecturaBinding
 com/sdn/slp/igu/databinding/ItemUsuarioBinding.java
  com.sdn.slp.igu.databinding.ItemUsuarioBinding
 com/sdn/slp/controlador/Tbl_Objeto.java
@@ -59,8 +48,21 @@ com/sdn/slp/igu/databinding/FrmUsuarioBinding.java
  com.sdn.slp.igu.databinding.FrmUsuarioBinding
 com/sdn/slp/igu/databinding/PnlParametroBinding.java
  com.sdn.slp.igu.databinding.PnlParametroBinding
-com/sdn/slp/igu/databinding/FragmentTabConsolidadoBinding.java
- com.sdn.slp.igu.databinding.FragmentTabConsolidadoBinding
+com/sdn/slp/igu/FrmBaseDeDatos.java
+ com.sdn.slp.igu.FrmBaseDeDatos
+ com.sdn.slp.igu.FrmBaseDeDatos$1
+ com.sdn.slp.igu.FrmBaseDeDatos$2
+ com.sdn.slp.igu.FrmBaseDeDatos$3
+ com.sdn.slp.igu.FrmBaseDeDatos$4
+com/sdn/slp/igu/Frm_IniciarSesion.java
+ com.sdn.slp.igu.Frm_IniciarSesion
+ com.sdn.slp.igu.Frm_IniciarSesion$1
+ com.sdn.slp.igu.Frm_IniciarSesion$2
+ com.sdn.slp.igu.Frm_IniciarSesion$3
+ com.sdn.slp.igu.Frm_IniciarSesion$4
+ com.sdn.slp.igu.Frm_IniciarSesion$5
+com/sdn/slp/utils/Utils.java
+ com.sdn.slp.utils.Utils
 com/sdn/slp/igu/FrmEscaneoLibre.java
  com.sdn.slp.igu.FrmEscaneoLibre
  com.sdn.slp.igu.FrmEscaneoLibre$1
@@ -84,9 +86,7 @@ com/sdn/slp/igu/FrmEscaneoLibre.java
  com.sdn.slp.igu.FrmEscaneoLibre$7
  com.sdn.slp.igu.FrmEscaneoLibre$8
  com.sdn.slp.igu.FrmEscaneoLibre$9
-com/sdn/utils/ExportarExcelAndSamba.java
- com.sdn.utils.ExportarExcelAndSamba
-com/sdn/slp/igu/databinding/FragmentTabLecturaBinding.java
- com.sdn.slp.igu.databinding.FragmentTabLecturaBinding
-com/sdn/slp/igu/databinding/FragmentTabDetalleBinding.java
- com.sdn.slp.igu.databinding.FragmentTabDetalleBinding
+com/sdn/slp/utils/ExportarExcelAndSamba.java
+ com.sdn.slp.utils.ExportarExcelAndSamba
+com/sdn/slp/utils/ConfApp.java
+ com.sdn.slp.utils.ConfApp

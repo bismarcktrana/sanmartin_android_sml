@@ -8,6 +8,7 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
+import android.content.pm.ActivityInfo;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -20,7 +21,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TabHost;
@@ -39,16 +39,14 @@ import com.sdn.bd.dao.TblProducto;
 import com.sdn.bd.modelo.Lectura2;
 import com.sdn.bd.modelo.Producto;
 
-import com.sdn.slp.controlador.Tbl_Parametro;
 import com.sdn.sound.SoundManager;
 import com.sdn.tableview.TableViewAdapter;
 import com.sdn.tableview.TableViewModel;
 import com.sdn.tableview.model.Cell;
-import com.sdn.utils.ConfApp;
-import com.sdn.utils.ExportarExcelAndSamba;
-import com.sdn.utils.Utils;
+import com.sdn.slp.utils.ConfApp;
+import com.sdn.slp.utils.ExportarExcelAndSamba;
+import com.sdn.slp.utils.Utils;
 
-import java.util.Date;
 import java.util.List;
 
 public class FrmEscaneoLibre extends AppCompatActivity {
@@ -195,6 +193,7 @@ public class FrmEscaneoLibre extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.frm_escaneo_libre);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

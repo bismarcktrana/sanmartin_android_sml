@@ -1,6 +1,5 @@
-package com.sdn.utils;
+package com.sdn.slp.utils;
 
-import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -9,8 +8,7 @@ import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
-import android.os.storage.StorageManager;
-import android.os.storage.StorageVolume;
+import android.provider.DocumentsContract;
 import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,14 +18,11 @@ import androidx.core.content.ContextCompat;
 import com.sdn.bd.dao.TblParametro;
 import com.sdn.bd.modelo.Lectura2;
 import com.sdn.slp.controlador.Tbl_Parametro;
-import com.sdn.slp.igu.Frm_IniciarSesion;
 import com.sdn.slp.igu.R;
 
 import org.apache.commons.codec.binary.Base64;
 
 import java.io.File;
-import java.io.IOException;
-import java.lang.reflect.Method;
 import java.math.BigDecimal;
 import java.net.MalformedURLException;
 import java.security.MessageDigest;
@@ -118,6 +113,15 @@ public class Utils {
         }
         return PATH_DIRECTORYWORK;
     }
+
+    /*public static String createWorkDirectory(Context pantalla,String DirectoryName) {
+        File PATH_DIRECTORYWORK = new File(Environment.getExternalStorageDirectory(), DirectoryName);
+        if (!PATH_DIRECTORYWORK.exists()) {
+            PATH_DIRECTORYWORK.mkdirs();
+            notifyToAndroidCreation(pantalla,PATH_DIRECTORYWORK);
+        }
+        return PATH_DIRECTORYWORK.getAbsolutePath();
+    }*/
 
     public static String getWorkDirectory(Context pantalla) {
         String PATH_DIRECTORYWORK= TblParametro.getClave(pantalla,"HOST_LOCATION");
@@ -374,13 +378,36 @@ public class Utils {
         return fecha == null ? null : ConfApp.ISO8601_FORMATTER.format(fecha);
     }
 
-    public static boolean isUserValidPath(Context context, String variable) {
+    public static boolean isValidDirectory(Context context, File RutaDeCarpeta) {
+        if(!RutaDeCarpeta.exists() ){
+            if(RutaDeCarpeta.isDirectory()){
+                RutaDeCarpeta.mkdirs();
+                notifyToAndroidCreation(context, RutaDeCarpeta);
+                File root = new File(RutaDeCarpeta.getAbsolutePath(), "prueba-crea-destruye");
+                if (!root.exists()) {
+                    root.mkdirs();
+                    if (root.exists()) {
+                        root.delete();
+                        return true;
+                    }
+                }
+            }
+        }else{
+            if(RutaDeCarpeta.isDirectory()){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean isValidDirectory(Context context, String variable) {
         File DirectorioLocal = new File(TblParametro.getClave(context, variable));
 
-        if (DirectorioLocal.exists()) {
+        if (DirectorioLocal.isDirectory()) {
             File root = new File(DirectorioLocal, "prueba-crea-destruye");
             if (!root.exists()) {
                 root.mkdirs();
+                notifyToAndroidCreation(context, root);
                 if (root.exists()) {
                     root.delete();
                     return true;
@@ -407,7 +434,6 @@ public class Utils {
             respuesta = false;
         }
         return respuesta;
-
     }
 
 

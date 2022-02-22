@@ -75,7 +75,7 @@ public class TblLectura2 {
         return resultado;
     }
 
-    public static boolean modificar(Context contexto, Integer id) {
+    public static boolean establecerComoEnviado(Context contexto, Integer id) {
         long resultado = -1;
         String[] args = new String[]{"" + id};
 
@@ -89,7 +89,7 @@ public class TblLectura2 {
         return resultado > 0;
     }
 
-    public static boolean modificar(Context contexto, String barra) {
+    public static boolean establecerComoEnviado(Context contexto, String barra) {
         long resultado = -1;
         String[] args = new String[]{"" + barra};
 

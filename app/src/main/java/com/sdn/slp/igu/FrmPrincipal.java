@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.Html;
@@ -32,7 +33,7 @@ import android.widget.Toast;
 import com.google.android.material.textfield.TextInputEditText;
 import com.sdn.bd.dao.TblOperador;
 import com.sdn.bd.modelo.Operador;
-import com.sdn.utils.ConfApp;
+import com.sdn.slp.utils.ConfApp;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -52,6 +53,7 @@ public class FrmPrincipal extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.frm_principal);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(myToolbar);

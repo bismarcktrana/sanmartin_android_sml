@@ -1,15 +1,16 @@
-package com.sdn.utils;
+package com.sdn.slp.utils;
 
 import android.content.Context;
+import android.os.Environment;
 import android.provider.Settings;
 
-import com.sdn.bd.modelo.Lectura2;
+import com.sdn.bd.dao.TblParametro;
 import com.sdn.slp.controlador.Tbl_Parametro;
 import com.sdn.bd.modelo.Operador;
 
+import java.io.File;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 /**
  * Created by bismarck on 15/8/2016.
@@ -60,6 +61,9 @@ public class ConfApp {
     public static String SYSTEM_USER;
     public static String SYSTEM_PASS;
 
+    public static String HOST_LOCATION;
+    public static String SERVER_SMB;
+
     public static Operador OPERADORLOGEADO = new Operador();
 
     public static SimpleDateFormat ISO8601_FORMATTER;
@@ -84,6 +88,8 @@ public class ConfApp {
 
     public static final  DecimalFormat ISO8601_DECIMAL_FORMAT_1 = new DecimalFormat("#,###.00");
 
+    public static boolean  DEBUG =false;
+
     public static void loadParameters(Context pantalla) {
 
         /*******************************CARGAR CONFIG SERVIDOR*****************************/
@@ -102,7 +108,24 @@ public class ConfApp {
         ConfApp.UUID_FROM_DEVICE = Settings.Secure.getString(pantalla.getContentResolver(), Settings.Secure.ANDROID_ID);
         ConfApp.UUID_ENCRYPTED =Tbl_Parametro.getClave(pantalla, "UUID");
         ConfApp.UUID_DESENCRYPTED =Utils.Desencriptar(pantalla, UUID_ENCRYPTED);
-        ConfApp.DEVICEAUTORIZED = ConfApp.UUID_FROM_DEVICE.trim().toString().equals(ConfApp.UUID_DESENCRYPTED.trim().toString());
+        ConfApp.DEVICEAUTORIZED = ConfApp.DEBUG || ConfApp.UUID_FROM_DEVICE.trim().toString().equals(ConfApp.UUID_DESENCRYPTED.trim().toString());
+
+
+        /*******************************CARGAR CONFIG SERVIDOR SAMBA*****************************/
+        try{
+            ConfApp.SERVER_SMB ="smb:";
+            ConfApp.SERVER_SMB +=TblParametro.getClave(pantalla, "SERVER_SMB");
+        }catch (Exception e){
+            ConfApp.SERVER_SMB ="smb:";
+        }
+
+        try{
+            ConfApp.HOST_LOCATION =TblParametro.getClave(pantalla, "HOST_LOCATION");
+            ConfApp.HOST_LOCATION= Utils.isValidDirectory(pantalla, new File(ConfApp.HOST_LOCATION))?ConfApp.HOST_LOCATION:Environment.getExternalStorageDirectory().getAbsolutePath();
+            System.out.println("Directory" +ConfApp.HOST_LOCATION);
+        }catch (Exception e){
+            ConfApp.HOST_LOCATION ="";
+        }
 
     }
 
